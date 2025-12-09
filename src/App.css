@@ -1,0 +1,23 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 80px;
+  padding: var(--spacing-xl) 0;
+}
+
+.main-content .container {
+  text-align: center;
+}
+
+.main-content h1 {
+  margin-bottom: var(--spacing-md);
+}
+
+.main-content p {
+  color: var(--color-text-secondary);
+}
