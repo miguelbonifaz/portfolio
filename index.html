@@ -1,408 +1,684 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubhendu Mitra - Portfolio Replica</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Bonifaz - Portafolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            font-family: 'Space Mono', monospace;
-            background-color: #ffffff;
-            color: #1a1a1a;
-        }
-        .serif-font {
-            font-family: 'Playfair Display', serif;
-        }
-        /* Custom thin borders to match the design exactly */
-        .thin-border-bottom {
-            border-bottom: 1px solid #e5e5e5;
-        }
-        .thin-border-top {
-            border-top: 1px solid #e5e5e5;
-        }
+      body {
+        font-family: "Space Mono", monospace;
+        background-color: #ffffff;
+        color: #1a1a1a;
+      }
+      .serif-font {
+        font-family: "Playfair Display", serif;
+      }
+      /* Custom thin borders to match the design exactly */
+      .thin-border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .thin-border-top {
+        border-top: 1px solid #e5e5e5;
+      }
 
-        /* Low poly image filter effect */
-        .grayscale-img {
-            filter: grayscale(100%);
-            opacity: 0.9;
-        }
+      /* Low poly image filter effect */
+      .grayscale-img {
+        filter: grayscale(100%);
+        opacity: 0.9;
+      }
 
-        .pill-badge {
-            border: 1px solid #4a6cf7;
-            color: #4a6cf7;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            padding: 2px 12px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
+      .pill-badge {
+        border: 1px solid #4a6cf7;
+        color: #4a6cf7;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        padding: 2px 12px;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
 
-        .pill-badge:hover {
-            background-color: #4a6cf7;
-            color: white;
-        }
+      .pill-badge:hover {
+        background-color: #4a6cf7;
+        color: white;
+      }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .nav-items {
-                display: none;
-            }
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .nav-items {
+          display: none;
         }
+      }
     </style>
-</head>
-<body class="min-h-screen flex flex-col justify-between">
-
+  </head>
+  <body class="min-h-screen flex flex-col justify-between">
     <!-- Header -->
-    <header class="w-full px-6 py-4 flex justify-between items-center thin-border-bottom text-xs md:text-sm text-gray-600 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
-        <div class="font-bold text-black tracking-tight">Shubhendu Mitra</div>
+    <header
+      class="w-full px-6 py-4 flex justify-between items-center thin-border-bottom text-xs md:text-sm text-gray-600 sticky top-0 bg-white/95 backdrop-blur-sm z-50"
+    >
+      <div class="font-bold text-black tracking-tight">Miguel Bonifaz</div>
 
-        <nav class="hidden md:flex space-x-12">
-            <a href="#" class="hover:text-black transition-colors">Home</a>
-            <a href="#about" class="hover:text-black transition-colors">About</a>
-            <a href="#works" class="hover:text-black transition-colors">Works</a>
-            <a href="#" class="hover:text-black transition-colors">Contact</a>
-        </nav>
+      <nav class="hidden md:flex space-x-12">
+        <a href="#" class="hover:text-black transition-colors">Inicio</a>
+        <a href="#about" class="hover:text-black transition-colors">Acerca de</a>
+        <a href="#works" class="hover:text-black transition-colors">Trabajos</a>
+        <a href="#" class="hover:text-black transition-colors">Contacto</a>
+      </nav>
 
-        <div id="clock" class="text-right text-gray-500 w-[140px]">
-            <!-- Time will be injected here via JS -->
-            Dec 9, 5:33 PM
-        </div>
+      <div id="clock" class="text-right text-gray-500 w-[140px]">
+        <!-- Time will be injected here via JS -->
+        Dec 9, 5:33 PM
+      </div>
     </header>
 
     <!-- Main Content Wrapper -->
     <main class="flex-grow w-full flex flex-col">
+      <!-- Hero Section -->
+      <section
+        class="flex flex-col items-center justify-center text-center px-4 py-20 min-h-[80vh]"
+      >
+        <!-- Portrait Image Placeholder -->
+        <div class="mb-0 relative">
+          <!-- Using a generated placeholder that resembles the low-poly style -->
+          <div
+            class="w-48 h-56 md:w-64 md:h-72 overflow-hidden mx-auto relative z-10"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Portrait"
+              class="w-full h-full object-cover grayscale-img"
+              style="
+                clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+                transform: scale(1.1);
+              "
+            />
+          </div>
+        </div>
 
-        <!-- Hero Section -->
-        <section class="flex flex-col items-center justify-center text-center px-4 py-20 min-h-[80vh]">
-            <!-- Portrait Image Placeholder -->
-            <div class="mb-0 relative">
-                <!-- Using a generated placeholder that resembles the low-poly style -->
-                <div class="w-48 h-56 md:w-64 md:h-72 overflow-hidden mx-auto relative z-10">
-                   <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                        alt="Portrait"
-                        class="w-full h-full object-cover grayscale-img"
-                        style="clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); transform: scale(1.1);"
-                   >
+        <!-- The horizontal line cutting below the image -->
+        <div class="w-full max-w-md border-t border-gray-400 mb-4"></div>
+
+        <!-- Intro Text -->
+        <div class="space-y-1">
+          <p class="text-sm md:text-base text-gray-600">¡Hola! Soy--</p>
+          <h1
+            class="text-5xl md:text-7xl text-gray-800 serif-font tracking-wide mb-6"
+          >
+            Miguel
+          </h1>
+        </div>
+
+        <!-- Links and Info Grid -->
+        <div class="w-full max-w-2xl mt-8 px-4">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0"
+          >
+            <!-- Left: LinkedIn & Badge -->
+            <div class="flex items-center space-x-3">
+              <a href="#" class="text-gray-600 hover:text-black">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+              <a href="#" class="pill-badge hover:no-underline">
+                Disponible para Trabajar
+              </a>
+            </div>
+
+            <!-- Right: Email -->
+            <div class="text-gray-500 text-sm">miguel@bonifaz.dev</div>
+          </div>
+
+          <!-- Bottom Details -->
+          <div
+            class="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-500 mt-2"
+          >
+            <div>Laravel Developer</div>
+            <div class="mt-2 md:mt-0">Basado en Lima, Perú</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="w-full thin-border-top bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- Label Column -->
+            <div
+              class="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit"
+            >
+              (01) &mdash; Acerca de
+            </div>
+            <!-- Content Column -->
+            <div class="md:col-span-9 space-y-12">
+              <h2
+                class="text-2xl md:text-3xl leading-relaxed font-light text-gray-800"
+              >
+                Construyo experiencias digitales que combinan
+                <span class="serif-font italic">pureza estética</span> con
+                profundidad funcional. Mi trabajo explora la intersección entre la
+                identidad de marca y la interacción del usuario.
+              </h2>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-gray-100"
+              >
+                <!-- Experience List -->
+                <div>
+                  <h3
+                    class="font-bold mb-6 text-xs uppercase tracking-wide text-gray-400"
+                  >
+                    Experiencia
+                  </h3>
+                  <ul class="space-y-4 text-sm text-gray-700">
+                    <li
+                      class="flex justify-between items-baseline group cursor-default"
+                    >
+                      <span class="group-hover:text-black transition-colors"
+                        >Desarrollador Senior Laravel</span
+                      >
+                      <span class="text-gray-400 text-xs">Presente</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-baseline group cursor-default"
+                    >
+                      <span class="group-hover:text-black transition-colors"
+                        >Full Stack Developer — Freelance</span
+                      >
+                      <span class="text-gray-400 text-xs">2021-23</span>
+                    </li>
+                    <li
+                      class="flex justify-between items-baseline group cursor-default"
+                    >
+                      <span class="group-hover:text-black transition-colors"
+                        >Desarrollo Web</span
+                      >
+                      <span class="text-gray-400 text-xs">2019-21</span>
+                    </li>
+                  </ul>
                 </div>
+                <!-- Services List -->
+                <div>
+                  <h3
+                    class="font-bold mb-6 text-xs uppercase tracking-wide text-gray-400"
+                  >
+                    Experiencia
+                  </h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600"
+                      >Laravel/PHP</span
+                    >
+                    <span
+                      class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600"
+                      >APIs RESTful</span
+                    >
+                    <span
+                      class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600"
+                      >MySQL/PostgreSQL</span
+                    >
+                    <span
+                      class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600"
+                      >Vue.js/React</span
+                    >
+                    <span
+                      class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600"
+                      >Filament</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works Section -->
+      <section id="works" class="w-full thin-border-top bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- Label Column -->
+            <div
+              class="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit"
+            >
+              (02) &mdash; Trabajos Seleccionados
             </div>
 
-            <!-- The horizontal line cutting below the image -->
-            <div class="w-full max-w-md border-t border-gray-400 mb-4"></div>
+            <!-- Projects Grid -->
+            <div class="md:col-span-9">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+                <!-- Project 1 -->
+                <div class="group cursor-pointer">
+                  <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Project 1"
+                      class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
+                    />
+                  </div>
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3
+                        class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4"
+                      >
+                        Sistema de Gestión
+                      </h3>
+                      <p class="text-xs text-gray-500">
+                        ERP / Laravel + Filament
+                      </p>
+                    </div>
+                    <span
+                      class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full"
+                      >2024</span
+                    >
+                  </div>
+                </div>
 
-            <!-- Intro Text -->
-            <div class="space-y-1">
-                <p class="text-sm md:text-base text-gray-600">Hello! I'm</p>
-                <h1 class="text-5xl md:text-7xl text-gray-800 serif-font tracking-wide mb-6">Shubhendu</h1>
+                <!-- Project 2 -->
+                <div class="group cursor-pointer md:mt-12">
+                  <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Project 2"
+                      class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
+                    />
+                  </div>
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3
+                        class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4"
+                      >
+                        E-commerce
+                      </h3>
+                      <p class="text-xs text-gray-500">Tienda Online / API REST</p>
+                    </div>
+                    <span
+                      class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full"
+                      >2023</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group cursor-pointer">
+                  <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1481487484168-9b930d55208d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Project 3"
+                      class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
+                    />
+                  </div>
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3
+                        class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4"
+                      >
+                        Portal Corporativo
+                      </h3>
+                      <p class="text-xs text-gray-500">Intranet / Laravel</p>
+                    </div>
+                    <span
+                      class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full"
+                      >2023</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group cursor-pointer md:mt-12">
+                  <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
+                    <img
+                      src="https://images.unsplash.com/photo-1558655146-d09347e0b7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="Project 4"
+                      class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
+                    />
+                  </div>
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3
+                        class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4"
+                      >
+                        Sistema de Reservas
+                      </h3>
+                      <p class="text-xs text-gray-500">Booking / Vue.js</p>
+                    </div>
+                    <span
+                      class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full"
+                      >2022</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 5 (Full Width / Centered) -->
+              <div
+                class="group cursor-pointer mt-16 border-t border-gray-100 pt-16"
+              >
+                <div
+                  class="aspect-[21/9] bg-gray-100 overflow-hidden mb-4 relative"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Project 5"
+                    class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3
+                      class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4"
+                    >
+                      Plataforma Educativa
+                    </h3>
+                    <p class="text-xs text-gray-500">LMS / Laravel + Livewire</p>
+                  </div>
+                  <span
+                    class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full"
+                    >2021</span
+                  >
+                </div>
+              </div>
+
+              <!-- View More Button -->
+              <div class="mt-20 flex justify-center">
+                <a
+                  href="#"
+                  class="group inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-black transition-colors border-b border-gray-300 pb-1 hover:border-black"
+                >
+                  <span>Archivo y Todos los Proyectos</span>
+                  <i
+                    data-lucide="arrow-right"
+                    class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automations Section -->
+      <section id="automations" class="w-full thin-border-top bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+
+            <!-- Label Column -->
+            <div class="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit">
+              (03) &mdash; Automatizaciones
             </div>
 
-            <!-- Links and Info Grid -->
-            <div class="w-full max-w-2xl mt-8 px-4">
-                <div class="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
+            <!-- Content Column -->
+            <div class="md:col-span-9">
+              <div class="mb-12">
+                <h2 class="serif-font text-3xl md:text-4xl text-gray-900 mb-4">Agentes de IA Conversacional</h2>
+                <p class="text-sm md:text-base text-gray-600 font-light max-w-2xl leading-relaxed">
+                  Además del desarrollo web, creo agentes inteligentes de WhatsApp que automatizan operaciones comerciales. Desde agendamiento hasta calificación de leads, estos bots trabajan 24/7.
+                </p>
+              </div>
 
-                    <!-- Left: LinkedIn & Badge -->
-                    <div class="flex items-center space-x-3">
-                        <a href="#" class="text-gray-600 hover:text-black">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Agent 1: Bonifaz Peluqueros -->
+                <div class="bg-white p-8 border border-gray-200 group hover:border-gray-400 transition-colors relative overflow-hidden">
+                  <!-- Decoration Icon -->
+                  <div class="absolute top-4 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">
+                    <i data-lucide="scissors" class="w-12 h-12 stroke-[1px]"></i>
+                  </div>
+
+                  <div class="flex items-center space-x-2 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-xs uppercase tracking-widest text-gray-400">Agente en Vivo</span>
+                  </div>
+
+                  <h3 class="serif-font text-2xl text-gray-900 mb-2">Bonifaz Peluqueros</h3>
+                  <p class="text-sm text-gray-500 mb-6 min-h-[40px]">Bot de agendamiento de citas que gestiona sincronización de calendario, reprogramación y consultas del menú de servicios.</p>
+
+                  <ul class="space-y-2 mb-8">
+                    <li class="flex items-center text-xs text-gray-600">
+                      <i data-lucide="check" class="w-3 h-3 mr-2 text-gray-400"></i>
+                      Reserva automática vía WhatsApp
+                    </li>
+                    <li class="flex items-center text-xs text-gray-600">
+                      <i data-lucide="check" class="w-3 h-3 mr-2 text-gray-400"></i>
+                      Recordatorios para reducir ausencias
+                    </li>
+                  </ul>
+
+                  <a href="#" class="inline-flex items-center text-xs uppercase tracking-widest text-black border-b border-black pb-1 hover:opacity-60 transition-opacity">
+                    Ver Flujo Lógico <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1"></i>
+                  </a>
+                </div>
+
+                <!-- Agent 2: Real Estate -->
+                <div class="bg-white p-8 border border-gray-200 group hover:border-gray-400 transition-colors relative overflow-hidden">
+                  <!-- Decoration Icon -->
+                  <div class="absolute top-4 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">
+                    <i data-lucide="building-2" class="w-12 h-12 stroke-[1px]"></i>
+                  </div>
+
+                  <div class="flex items-center space-x-2 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-xs uppercase tracking-widest text-gray-400">Agente en Vivo</span>
+                  </div>
+
+                  <h3 class="serif-font text-2xl text-gray-900 mb-2">Asistente Inmobiliario</h3>
+                  <p class="text-sm text-gray-500 mb-6 min-h-[40px]">Bot de calificación de leads que filtra compradores potenciales y programa visitas a propiedades al instante.</p>
+
+                  <ul class="space-y-2 mb-8">
+                    <li class="flex items-center text-xs text-gray-600">
+                      <i data-lucide="check" class="w-3 h-3 mr-2 text-gray-400"></i>
+                      Pre-calificación con Q&A
+                    </li>
+                    <li class="flex items-center text-xs text-gray-600">
+                      <i data-lucide="check" class="w-3 h-3 mr-2 text-gray-400"></i>
+                      Integración CRM (HubSpot)
+                    </li>
+                  </ul>
+
+                  <a href="#" class="inline-flex items-center text-xs uppercase tracking-widest text-black border-b border-black pb-1 hover:opacity-60 transition-opacity">
+                    Ver Flujo Lógico <i data-lucide="arrow-up-right" class="w-3 h-3 ml-1"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="w-full thin-border-top bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- Label Column -->
+            <div
+              class="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit"
+            >
+              (04) &mdash; Contacto
+            </div>
+
+            <!-- Content Column -->
+            <div class="md:col-span-9">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="space-y-8">
+                  <h2 class="serif-font text-3xl text-gray-800">
+                    Comencemos un proyecto
+                  </h2>
+                  <form class="space-y-6">
+                    <div class="space-y-1">
+                      <label
+                        for="name"
+                        class="text-xs text-gray-400 uppercase tracking-wide"
+                        >Nombre</label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        class="w-full border-b border-gray-200 py-2 text-gray-800 focus:outline-none focus:border-gray-800 transition-colors bg-transparent font-light"
+                        placeholder="Tu nombre"
+                      />
+                    </div>
+                    <div class="space-y-1">
+                      <label
+                        for="email"
+                        class="text-xs text-gray-400 uppercase tracking-wide"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        class="w-full border-b border-gray-200 py-2 text-gray-800 focus:outline-none focus:border-gray-800 transition-colors bg-transparent font-light"
+                        placeholder="tu@ejemplo.com"
+                      />
+                    </div>
+                    <div class="space-y-1">
+                      <label
+                        for="message"
+                        class="text-xs text-gray-400 uppercase tracking-wide"
+                        >Mensaje</label
+                      >
+                      <textarea
+                        id="message"
+                        rows="3"
+                        class="w-full border-b border-gray-200 py-2 text-gray-800 focus:outline-none focus:border-gray-800 transition-colors bg-transparent font-light resize-none"
+                        placeholder="Cuéntame sobre tu proyecto..."
+                      ></textarea>
+                    </div>
+                    <button
+                      type="button"
+                      class="mt-4 px-6 py-3 bg-gray-900 text-white text-xs uppercase tracking-widest hover:bg-gray-700 transition-colors w-full md:w-auto"
+                    >
+                      Enviar Mensaje
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Socials & Info -->
+                <div class="space-y-12 md:pt-16">
+                  <div>
+                    <h3
+                      class="font-bold mb-4 text-xs uppercase tracking-wide text-gray-400"
+                    >
+                      Redes Sociales
+                    </h3>
+                    <ul class="space-y-4">
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center space-x-3 text-gray-600 hover:text-black transition-colors group"
+                        >
+                          <i
+                            data-lucide="linkedin"
+                            class="w-5 h-5 text-gray-400 group-hover:text-black transition-colors"
+                          ></i>
+                          <span class="text-sm">LinkedIn</span>
                         </a>
-                        <a href="#" class="pill-badge hover:no-underline">
-                            Open to Work
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center space-x-3 text-gray-600 hover:text-black transition-colors group"
+                        >
+                          <!-- X Icon (custom svg for better accuracy or lucide twitter) -->
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-5 h-5 text-gray-400 group-hover:text-black transition-colors"
+                          >
+                            <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                            <path
+                              d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"
+                            />
+                          </svg>
+                          <span class="text-sm">X (Twitter)</span>
                         </a>
-                    </div>
+                      </li>
+                      <li>
+                        <a
+                          href="https://wa.me/1234567890"
+                          class="flex items-center space-x-3 text-gray-600 hover:text-black transition-colors group"
+                        >
+                          <i
+                            data-lucide="message-circle"
+                            class="w-5 h-5 text-gray-400 group-hover:text-black transition-colors"
+                          ></i>
+                          <span class="text-sm">WhatsApp</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
 
-                    <!-- Right: Email -->
-                    <div class="text-gray-500 text-sm">
-                        hi@shubhendu.co.in
-                    </div>
+                  <div>
+                    <h3
+                      class="font-bold mb-4 text-xs uppercase tracking-wide text-gray-400"
+                    >
+                      Contacto Directo
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-2">miguel@bonifaz.dev</p>
+                    <p class="text-sm text-gray-600">+51 999 999 999</p>
+                  </div>
                 </div>
-
-                <!-- Bottom Details -->
-                <div class="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-500 mt-2">
-                    <div>Design Generalist</div>
-                    <div class="mt-2 md:mt-0">Based in New Delhi</div>
-                </div>
+              </div>
             </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="w-full thin-border-top bg-white">
-            <div class="max-w-7xl mx-auto px-6 py-20">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-                    <!-- Label Column -->
-                    <div class="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit">
-                        (01) &mdash; About
-                    </div>
-                    <!-- Content Column -->
-                    <div class="md:col-span-9 space-y-12">
-                        <h2 class="text-2xl md:text-3xl leading-relaxed font-light text-gray-800">
-                            I construct digital experiences that blend <span class="serif-font italic">aesthetic purity</span> with functional depth. My work explores the intersection of brand identity and user interaction.
-                        </h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-gray-100">
-                             <!-- Experience List -->
-                            <div>
-                                <h3 class="font-bold mb-6 text-xs uppercase tracking-wide text-gray-400">Experience</h3>
-                                <ul class="space-y-4 text-sm text-gray-700">
-                                    <li class="flex justify-between items-baseline group cursor-default">
-                                        <span class="group-hover:text-black transition-colors">Senior Product Designer</span>
-                                        <span class="text-gray-400 text-xs">Present</span>
-                                    </li>
-                                    <li class="flex justify-between items-baseline group cursor-default">
-                                        <span class="group-hover:text-black transition-colors">Studio Analog — Lead</span>
-                                        <span class="text-gray-400 text-xs">2021-23</span>
-                                    </li>
-                                    <li class="flex justify-between items-baseline group cursor-default">
-                                        <span class="group-hover:text-black transition-colors">Freelance Direction</span>
-                                        <span class="text-gray-400 text-xs">2019-21</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Services List -->
-                            <div>
-                                <h3 class="font-bold mb-6 text-xs uppercase tracking-wide text-gray-400">Expertise</h3>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600">UI/UX Design</span>
-                                    <span class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600">Design Systems</span>
-                                    <span class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600">Prototyping</span>
-                                    <span class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600">Brand Strategy</span>
-                                    <span class="px-3 py-1 border border-gray-200 rounded-full text-xs text-gray-600">Webflow</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Works Section -->
-        <section id="works" class="w-full thin-border-top bg-white">
-            <div class="max-w-7xl mx-auto px-6 py-20">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-
-                    <!-- Label Column -->
-                    <div class="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit">
-                        (02) &mdash; Selected Works
-                    </div>
-
-                    <!-- Projects Grid -->
-                    <div class="md:col-span-9">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
-
-                            <!-- Project 1 -->
-                            <div class="group cursor-pointer">
-                                <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
-                                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                         alt="Project 1"
-                                         class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
-                                    >
-                                </div>
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h3 class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4">Chronicle App</h3>
-                                        <p class="text-xs text-gray-500">Fintech / Mobile Design</p>
-                                    </div>
-                                    <span class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full">2024</span>
-                                </div>
-                            </div>
-
-                            <!-- Project 2 -->
-                            <div class="group cursor-pointer md:mt-12">
-                                <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
-                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                         alt="Project 2"
-                                         class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
-                                    >
-                                </div>
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h3 class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4">Aura Identity</h3>
-                                        <p class="text-xs text-gray-500">Branding / Typography</p>
-                                    </div>
-                                    <span class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full">2023</span>
-                                </div>
-                            </div>
-
-                            <!-- Project 3 -->
-                            <div class="group cursor-pointer">
-                                <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
-                                    <img src="https://images.unsplash.com/photo-1481487484168-9b930d55208d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                         alt="Project 3"
-                                         class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
-                                    >
-                                </div>
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h3 class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4">Mono Magazine</h3>
-                                        <p class="text-xs text-gray-500">Editorial / Web</p>
-                                    </div>
-                                    <span class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full">2023</span>
-                                </div>
-                            </div>
-
-                            <!-- Project 4 -->
-                            <div class="group cursor-pointer md:mt-12">
-                                <div class="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
-                                    <img src="https://images.unsplash.com/photo-1558655146-d09347e0b7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                         alt="Project 4"
-                                         class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
-                                    >
-                                </div>
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h3 class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4">Kinetic Type</h3>
-                                        <p class="text-xs text-gray-500">Motion / Experimental</p>
-                                    </div>
-                                    <span class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full">2022</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Project 5 (Full Width / Centered) -->
-                        <div class="group cursor-pointer mt-16 border-t border-gray-100 pt-16">
-                             <div class="aspect-[21/9] bg-gray-100 overflow-hidden mb-4 relative">
-                                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                                     alt="Project 5"
-                                     class="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
-                                >
-                            </div>
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="serif-font text-xl text-gray-900 mb-1 group-hover:underline decoration-1 underline-offset-4">Vessel Architecture</h3>
-                                    <p class="text-xs text-gray-500">Web Design / 3D</p>
-                                </div>
-                                <span class="text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full">2021</span>
-                            </div>
-                        </div>
-
-                        <!-- View More Button -->
-                        <div class="mt-20 flex justify-center">
-                            <a href="#" class="group inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-black transition-colors border-b border-gray-300 pb-1 hover:border-black">
-                                <span>Archive & All Projects</span>
-                                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="w-full thin-border-top bg-white">
-            <div class="max-w-7xl mx-auto px-6 py-20">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-
-                    <!-- Label Column -->
-                    <div class="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit">
-                        (03) &mdash; Contact
-                    </div>
-
-                    <!-- Content Column -->
-                    <div class="md:col-span-9">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-
-                            <!-- Contact Form -->
-                            <div class="space-y-8">
-                                <h2 class="serif-font text-3xl text-gray-800">Let's start a project</h2>
-                                <form class="space-y-6">
-                                    <div class="space-y-1">
-                                        <label for="name" class="text-xs text-gray-400 uppercase tracking-wide">Name</label>
-                                        <input type="text" id="name" class="w-full border-b border-gray-200 py-2 text-gray-800 focus:outline-none focus:border-gray-800 transition-colors bg-transparent font-light" placeholder="John Doe">
-                                    </div>
-                                    <div class="space-y-1">
-                                        <label for="email" class="text-xs text-gray-400 uppercase tracking-wide">Email</label>
-                                        <input type="email" id="email" class="w-full border-b border-gray-200 py-2 text-gray-800 focus:outline-none focus:border-gray-800 transition-colors bg-transparent font-light" placeholder="john@example.com">
-                                    </div>
-                                    <div class="space-y-1">
-                                        <label for="message" class="text-xs text-gray-400 uppercase tracking-wide">Message</label>
-                                        <textarea id="message" rows="3" class="w-full border-b border-gray-200 py-2 text-gray-800 focus:outline-none focus:border-gray-800 transition-colors bg-transparent font-light resize-none" placeholder="Tell me about your project..."></textarea>
-                                    </div>
-                                    <button type="button" class="mt-4 px-6 py-3 bg-gray-900 text-white text-xs uppercase tracking-widest hover:bg-gray-700 transition-colors w-full md:w-auto">
-                                        Send Message
-                                    </button>
-                                </form>
-                            </div>
-
-                            <!-- Socials & Info -->
-                            <div class="space-y-12 md:pt-16">
-                                <div>
-                                    <h3 class="font-bold mb-4 text-xs uppercase tracking-wide text-gray-400">Socials</h3>
-                                    <ul class="space-y-4">
-                                        <li>
-                                            <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-black transition-colors group">
-                                                <i data-lucide="linkedin" class="w-5 h-5 text-gray-400 group-hover:text-black transition-colors"></i>
-                                                <span class="text-sm">LinkedIn</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-black transition-colors group">
-                                                <!-- X Icon (custom svg for better accuracy or lucide twitter) -->
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-gray-400 group-hover:text-black transition-colors"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
-                                                <span class="text-sm">X (Twitter)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://wa.me/1234567890" class="flex items-center space-x-3 text-gray-600 hover:text-black transition-colors group">
-                                                <i data-lucide="message-circle" class="w-5 h-5 text-gray-400 group-hover:text-black transition-colors"></i>
-                                                <span class="text-sm">WhatsApp</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <h3 class="font-bold mb-4 text-xs uppercase tracking-wide text-gray-400">Direct Contact</h3>
-                                    <p class="text-sm text-gray-600 mb-2">hi@shubhendu.co.in</p>
-                                    <p class="text-sm text-gray-600">+91 98765 43210</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="w-full thin-border-top py-4 bg-white z-10 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-xs md:text-sm text-gray-600">
-                <div class="hover:text-black cursor-pointer transition-colors">Brand & Communication Design</div>
-                <div class="hover:text-black cursor-pointer transition-colors">UI/UX Design</div>
-                <div class="hover:text-black cursor-pointer transition-colors">Motion & Interaction Design</div>
-            </div>
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-xs md:text-sm text-gray-600"
+        >
+          <div class="hover:text-black cursor-pointer transition-colors">
+            Desarrollo Backend
+          </div>
+          <div class="hover:text-black cursor-pointer transition-colors">
+            APIs & Integraciones
+          </div>
+          <div class="hover:text-black cursor-pointer transition-colors">
+            Automatización & Bots
+          </div>
         </div>
+      </div>
     </footer>
 
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+      // Initialize Lucide Icons
+      lucide.createIcons();
 
-        // Clock Functionality
-        function updateClock() {
-            const now = new Date();
-            const options = {
-                month: 'short',
-                day: 'numeric',
-                hour: 'numeric',
-                minute: 'numeric',
-                hour12: true
-            };
-            // Format example: "Dec 9, 5:33 PM"
-            let timeString = now.toLocaleDateString('en-US', options);
+      // Clock Functionality
+      function updateClock() {
+        const now = new Date();
+        const options = {
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        };
+        // Format example: "9 dic, 5:33 PM"
+        let timeString = now.toLocaleDateString("es-ES", options);
 
-            // Remove the comma between date and time to match design exactly if needed,
-            // but standard US locale includes it. The design has "Dec 9, 5:33 PM".
+        // Remove the comma between date and time to match design exactly if needed,
+        // but standard US locale includes it. The design has "Dec 9, 5:33 PM".
 
-            document.getElementById('clock').textContent = timeString;
-        }
+        document.getElementById("clock").textContent = timeString;
+      }
 
-        setInterval(updateClock, 1000);
-        updateClock(); // Run immediately
+      setInterval(updateClock, 1000);
+      updateClock(); // Run immediately
     </script>
-</body>
+  </body>
 </html>
