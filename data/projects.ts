@@ -21,7 +21,10 @@ Los resultados fueron inmediatos: reducción del 40% en llamadas telefónicas pa
     images: {
       thumbnail: '/assets/images/projects/bonifazpeluqueros.com__(1).png',
       hero: '/assets/images/projects/bonifazpeluqueros.com__(1).png',
-      gallery: [],
+      gallery: [
+        '/assets/images/projects/image.png',
+        '/assets/images/projects/image 1.png',
+      ],
     },
   },
   {

@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { Linkedin, MessageCircle, Loader2 } from 'lucide-react'
-import { useFormState, useFormStatus } from 'react-dom'
+import { useActionState } from 'react'
+import { useFormStatus } from 'react-dom'
 import { submitContactForm, type ContactFormState } from '@/app/actions/contact'
 import { useEffect, useRef } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
@@ -29,7 +30,7 @@ function SubmitButton() {
 }
 
 export default function Contact() {
-  const [state, formAction] = useFormState<ContactFormState | null, FormData>(
+  const [state, formAction, isPending] = useActionState<ContactFormState | null, FormData>(
     submitContactForm,
     null
   )

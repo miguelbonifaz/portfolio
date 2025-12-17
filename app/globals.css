@@ -49,3 +49,30 @@ body {
   background-color: #4a6cf7;
   color: white;
 }
+
+/* Automations page styles */
+.dotted-bg {
+  background-color: black;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 24px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(74, 108, 247, 0.4) 0%, rgba(74, 108, 247, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.content-z {
+  position: relative;
+  z-index: 10;
+}

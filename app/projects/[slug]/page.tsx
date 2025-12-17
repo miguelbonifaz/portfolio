@@ -23,9 +23,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
-  const project = getProjectBySlug(params.slug)
+  const { slug } = await params
+  const project = getProjectBySlug(slug)
   const profile = getProfile()
 
   if (!project) {
@@ -75,14 +76,15 @@ export async function generateMetadata({
   }
 }
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const project = getProjectBySlug(params.slug)
+  const { slug } = await params
+  const project = getProjectBySlug(slug)
   const profile = getProfile()
-  const { previous, next } = getProjectNavigation(params.slug)
+  const { previous, next } = getProjectNavigation(slug)
 
   if (!project) {
     notFound()
