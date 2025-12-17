@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beaubella - Miguel Bonifaz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body {
+        font-family: "Space Mono", monospace;
+        background-color: #ffffff;
+        color: #1a1a1a;
+      }
+      .serif-font {
+        font-family: "Playfair Display", serif;
+      }
+      .thin-border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .thin-border-top {
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .grayscale-img {
+        filter: grayscale(100%);
+        opacity: 0.95;
+        transition: all 0.5s ease;
+      }
+
+      .hover-color:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .nav-items {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <header
+      class="w-full px-6 py-4 flex justify-between items-center thin-border-bottom text-xs md:text-sm text-gray-600 sticky top-0 bg-white/95 backdrop-blur-sm z-50"
+    >
+      <div class="font-bold text-black tracking-tight">
+        <a href="index.html">Miguel Bonifaz</a>
+      </div>
+
+      <nav class="hidden md:flex space-x-12 items-center">
+        <a href="index.html" class="hover:text-black transition-colors">Inicio</a>
+        <a href="index.html#about" class="hover:text-black transition-colors">Acerca de</a>
+        <a href="index.html#works" class="hover:text-black transition-colors">Trabajos</a>
+        <a href="automations.html" class="text-white bg-black px-4 py-2 rounded-full hover:bg-gray-800 transition-colors shadow-lg hover:shadow-blue-500/20">
+          ✨ Automatizaciones
+        </a>
+        <a href="index.html#contact" class="hover:text-black transition-colors">Contacto</a>
+      </nav>
+
+      <div id="clock" class="text-right text-gray-500 w-[140px]">
+        Dec 9, 5:33 PM
+      </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow w-full flex flex-col">
+      <!-- Hero Section -->
+      <section class="w-full pt-20 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col space-y-4 mb-12">
+            <div
+              class="flex items-center space-x-4 text-xs text-gray-400 uppercase tracking-widest"
+            >
+              <span>Spa & Wellness</span>
+              <span>&mdash;</span>
+              <span>Sistema de Gestión</span>
+              <span>&mdash;</span>
+              <span>2023</span>
+            </div>
+            <h1
+              class="text-4xl md:text-6xl lg:text-7xl serif-font text-gray-900 leading-tight"
+            >
+              Beaubella
+            </h1>
+          </div>
+
+          <!-- Main Hero Image -->
+          <div class="w-full aspect-[21/9] bg-gray-100 overflow-hidden mb-12">
+            <img
+              src="assets/images/projects/image 5.png"
+              alt="Beaubella - Sistema de Gestión"
+              class="w-full h-full object-cover grayscale-img hover-color"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Details & Content -->
+      <section class="w-full thin-border-top bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- Sidebar Info (Project Metadata) -->
+            <div class="md:col-span-3 space-y-8 sticky top-24 h-fit">
+              <!-- Info Block 1 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Cliente
+                </h3>
+                <p class="text-sm text-gray-900">Beaubella Spa</p>
+              </div>
+
+              <!-- Info Block 2 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Rol
+                </h3>
+                <p class="text-sm text-gray-900">Full Stack Developer</p>
+                <p class="text-sm text-gray-500">Sistema Híbrido</p>
+              </div>
+
+              <!-- Info Block 3 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Stack Tecnológico
+                </h3>
+                <ul class="text-sm text-gray-900 space-y-1">
+                  <li>Laravel</li>
+                  <li>Filament (parcial)</li>
+                  <li>TailwindCSS</li>
+                  <li>Alpine.js</li>
+                </ul>
+              </div>
+
+              <!-- Info Block 4 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Año
+                </h3>
+                <p class="text-sm text-gray-900">2023</p>
+              </div>
+
+              <!-- Back Button -->
+              <div class="pt-8">
+                <a
+                  href="index.html#works"
+                  class="group inline-flex items-center space-x-2 text-xs text-gray-500 hover:text-black transition-colors"
+                >
+                  <i
+                    data-lucide="arrow-left"
+                    class="w-3 h-3 group-hover:-translate-x-1 transition-transform"
+                  ></i>
+                  <span>Volver a Trabajos</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Main Content Column -->
+            <div class="md:col-span-9 space-y-16">
+              <!-- Description Section -->
+              <div class="space-y-8 max-w-3xl">
+                <h2
+                  class="text-2xl md:text-3xl leading-relaxed font-light text-gray-800"
+                >
+                  Sistema híbrido de gestión de citas con
+                  <span class="serif-font italic">Filament Form & Table Builder</span>
+                  integrado en aplicación custom.
+                </h2>
+                <div
+                  class="space-y-6 text-sm md:text-base text-gray-600 leading-relaxed font-light"
+                >
+                  <p>
+                    Beaubella es un spa de alta gama que necesitaba un sistema de gestión
+                    personalizado pero no quería comprometer la calidad de la experiencia
+                    administrativa. El desafío era crear una solución que combinara un frontend
+                    público totalmente custom con las potentes herramientas de Filament en el backend.
+                  </p>
+                  <p>
+                    Este proyecto representa un enfoque híbrido interesante: utilicé Filament Form
+                    Builder y Table Builder como componentes independientes dentro de una aplicación
+                    Laravel tradicional, sin adoptar el panel completo de Filament. Esto me permitió
+                    aprovechar la potencia de los builders para formularios complejos y tablas de datos,
+                    mientras mantenía total control sobre el diseño y flujo de la aplicación.
+                  </p>
+                  <p>
+                    El sistema gestiona citas, clientes, servicios, inventario de productos,
+                    y generación de reportes. El frontend público permite reservar citas con
+                    disponibilidad en tiempo real, mientras el panel administrativo usa Filament
+                    Components para operaciones CRUD eficientes.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Key Features Section -->
+              <div class="space-y-6">
+                <h3 class="text-xl serif-font text-gray-900">Funcionalidades Clave</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="calendar-check" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Sistema de Reservaciones</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Frontend público para reservar servicios con calendario interactivo.
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="users" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Gestión de Clientes</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      CRM básico con historial de servicios y preferencias.
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="package" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Inventario de Productos</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Control de stock de productos utilizados en tratamientos.
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="dollar-sign" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Facturación</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Generación automática de facturas por servicios prestados.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Challenges & Solutions -->
+              <div class="space-y-6 bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-xl serif-font text-gray-900">Desafíos Técnicos</h3>
+                <div class="space-y-4">
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-2">Arquitectura Híbrida</h4>
+                    <p class="text-sm text-gray-600">
+                      El mayor desafío fue integrar Filament Form Builder y Table Builder de forma
+                      modular sin usar el panel completo. Creé controllers custom que instancian
+                      los builders directamente, permitiéndome aprovechar validaciones avanzadas,
+                      campos relacionales y tablas con filtros sin sacrificar la libertad del frontend.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-2">Theming Personalizado</h4>
+                    <p class="text-sm text-gray-600">
+                      Tuve que extender los components de Filament para que se alinearan con el
+                      diseño del spa. Utilicé custom views, sobreescribí estilos con TailwindCSS,
+                      y creé custom fields cuando los defaults no cumplían con los requisitos de UX.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-2">Sincronización en Tiempo Real</h4>
+                    <p class="text-sm text-gray-600">
+                      Implementé Laravel Echo con Pusher para actualizar disponibilidad de citas
+                      en tiempo real cuando múltiples recepcionistas trabajan simultáneamente,
+                      evitando conflictos de doble reservación.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical Insights -->
+              <div class="space-y-6 border-l-4 border-blue-500 pl-6 py-4 bg-blue-50">
+                <h3 class="text-lg serif-font text-gray-900">Insight Técnico</h3>
+                <p class="text-sm text-gray-700">
+                  Este proyecto demostró que Filament no es todo o nada. Puedes aprovechar partes
+                  específicas del ecosistema (Form Builder, Table Builder) en aplicaciones Laravel
+                  tradicionales. Esto es especialmente útil cuando tienes requisitos de frontend
+                  muy específicos pero quieres la productividad de Filament en el backend.
+                </p>
+                <p class="text-sm text-gray-700">
+                  El enfoque híbrido aumentó la velocidad de desarrollo en un 40% comparado con
+                  construir todo desde cero, mientras mantenía la flexibilidad necesaria para
+                  el diseño personalizado del cliente.
+                </p>
+              </div>
+
+              <!-- Results Section -->
+              <div class="space-y-6">
+                <h3 class="text-xl serif-font text-gray-900">Resultados</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div class="text-center p-6 bg-white border border-gray-200">
+                    <div class="text-3xl serif-font text-blue-500 mb-2">40%</div>
+                    <div class="text-xs text-gray-600 uppercase tracking-widest">Más rápido desarrollo</div>
+                  </div>
+                  <div class="text-center p-6 bg-white border border-gray-200">
+                    <div class="text-3xl serif-font text-blue-500 mb-2">300+</div>
+                    <div class="text-xs text-gray-600 uppercase tracking-widest">Citas/mes gestionadas</div>
+                  </div>
+                  <div class="text-center p-6 bg-white border border-gray-200">
+                    <div class="text-3xl serif-font text-blue-500 mb-2">100%</div>
+                    <div class="text-xs text-gray-600 uppercase tracking-widest">Diseño personalizado</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Navigation -->
+      <section class="w-full thin-border-top bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+          <div class="flex justify-between items-center">
+            <!-- Prev Project -->
+            <a href="sonata.html" class="group text-left">
+              <span
+                class="block text-xs text-gray-400 uppercase tracking-widest mb-1 group-hover:text-black transition-colors"
+                >Anterior</span
+              >
+              <span
+                class="block text-lg md:text-xl serif-font text-gray-600 group-hover:text-black transition-colors"
+                >Sonata</span
+              >
+            </a>
+
+            <!-- Next Project -->
+            <a href="bonifaz-peluqueros.html" class="group text-right">
+              <span
+                class="block text-xs text-gray-400 uppercase tracking-widest mb-1 group-hover:text-black transition-colors"
+                >Siguiente</span
+              >
+              <span
+                class="block text-lg md:text-xl serif-font text-gray-600 group-hover:text-black transition-colors"
+                >Bonifaz Peluqueros</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="w-full thin-border-top bg-gray-50">
+        <div class="max-w-3xl mx-auto px-6 py-20 text-center space-y-6">
+          <h2 class="serif-font text-3xl md:text-4xl text-gray-800">
+            ¿Tienes un proyecto en mente?
+          </h2>
+          <p class="text-sm text-gray-600">
+            Estoy disponible para proyectos freelance y colaboraciones.
+          </p>
+          <a
+            href="index.html#contact"
+            class="inline-block mt-4 px-8 py-3 bg-gray-900 text-white text-xs uppercase tracking-widest hover:bg-gray-700 transition-colors"
+          >
+            Contáctame
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full thin-border-top py-4 bg-white z-10 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-xs md:text-sm text-gray-600"
+        >
+          <div class="hover:text-black cursor-pointer transition-colors">
+            <a href="index.html">© Miguel Bonifaz</a>
+          </div>
+          <div class="hover:text-black cursor-pointer transition-colors">
+            <a href="mailto:miguel@bonifaz.dev">miguel@bonifaz.dev</a>
+          </div>
+          <div class="hover:text-black cursor-pointer transition-colors">
+            <a href="index.html#contact">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      function updateClock() {
+        const now = new Date();
+        const options = {
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        };
+        let timeString = now.toLocaleDateString("es-ES", options);
+        document.getElementById("clock").textContent = timeString;
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  </body>
+</html>

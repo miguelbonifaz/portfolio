@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonata - Miguel Bonifaz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body {
+        font-family: "Space Mono", monospace;
+        background-color: #ffffff;
+        color: #1a1a1a;
+      }
+      .serif-font {
+        font-family: "Playfair Display", serif;
+      }
+      .thin-border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .thin-border-top {
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .grayscale-img {
+        filter: grayscale(100%);
+        opacity: 0.95;
+        transition: all 0.5s ease;
+      }
+
+      .hover-color:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .nav-items {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <header
+      class="w-full px-6 py-4 flex justify-between items-center thin-border-bottom text-xs md:text-sm text-gray-600 sticky top-0 bg-white/95 backdrop-blur-sm z-50"
+    >
+      <div class="font-bold text-black tracking-tight">
+        <a href="index.html">Miguel Bonifaz</a>
+      </div>
+
+      <nav class="hidden md:flex space-x-12 items-center">
+        <a href="index.html" class="hover:text-black transition-colors">Inicio</a>
+        <a href="index.html#about" class="hover:text-black transition-colors">Acerca de</a>
+        <a href="index.html#works" class="hover:text-black transition-colors">Trabajos</a>
+        <a href="automations.html" class="text-white bg-black px-4 py-2 rounded-full hover:bg-gray-800 transition-colors shadow-lg hover:shadow-blue-500/20">
+          ✨ Automatizaciones
+        </a>
+        <a href="index.html#contact" class="hover:text-black transition-colors">Contacto</a>
+      </nav>
+
+      <div id="clock" class="text-right text-gray-500 w-[140px]">
+        Dec 9, 5:33 PM
+      </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow w-full flex flex-col">
+      <!-- Hero Section -->
+      <section class="w-full pt-20 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col space-y-4 mb-12">
+            <div
+              class="flex items-center space-x-4 text-xs text-gray-400 uppercase tracking-widest"
+            >
+              <span>Educación Musical</span>
+              <span>&mdash;</span>
+              <span>Sistema de Reservaciones</span>
+              <span>&mdash;</span>
+              <span>2022</span>
+            </div>
+            <h1
+              class="text-4xl md:text-6xl lg:text-7xl serif-font text-gray-900 leading-tight"
+            >
+              Sonata
+            </h1>
+          </div>
+
+          <!-- Main Hero Image -->
+          <div class="w-full aspect-[21/9] bg-gray-100 overflow-hidden mb-12">
+            <img
+              src="assets/images/projects/image 2.png"
+              alt="Sonata - Plataforma de Reservaciones"
+              class="w-full h-full object-cover grayscale-img hover-color"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Details & Content -->
+      <section class="w-full thin-border-top bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- Sidebar Info (Project Metadata) -->
+            <div class="md:col-span-3 space-y-8 sticky top-24 h-fit">
+              <!-- Info Block 1 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Cliente
+                </h3>
+                <p class="text-sm text-gray-900">Sonata Music School</p>
+              </div>
+
+              <!-- Info Block 2 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Rol
+                </h3>
+                <p class="text-sm text-gray-900">Full Stack Developer</p>
+                <p class="text-sm text-gray-500">Primer Proyecto Freelance</p>
+              </div>
+
+              <!-- Info Block 3 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Stack Tecnológico
+                </h3>
+                <ul class="text-sm text-gray-900 space-y-1">
+                  <li>Laravel</li>
+                  <li>Livewire</li>
+                  <li>TailwindCSS</li>
+                  <li>Alpine.js</li>
+                </ul>
+              </div>
+
+              <!-- Info Block 4 -->
+              <div>
+                <h3
+                  class="text-gray-400 text-xs tracking-widest uppercase mb-2"
+                >
+                  Año
+                </h3>
+                <p class="text-sm text-gray-900">2022</p>
+              </div>
+
+              <!-- Back Button -->
+              <div class="pt-8">
+                <a
+                  href="index.html#works"
+                  class="group inline-flex items-center space-x-2 text-xs text-gray-500 hover:text-black transition-colors"
+                >
+                  <i
+                    data-lucide="arrow-left"
+                    class="w-3 h-3 group-hover:-translate-x-1 transition-transform"
+                  ></i>
+                  <span>Volver a Trabajos</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Main Content Column -->
+            <div class="md:col-span-9 space-y-16">
+              <!-- Description Section -->
+              <div class="space-y-8 max-w-3xl">
+                <h2
+                  class="text-2xl md:text-3xl leading-relaxed font-light text-gray-800"
+                >
+                  Mi primer proyecto freelance:
+                  <span class="serif-font italic">plataforma de reservaciones</span>
+                  para escuela de música.
+                </h2>
+                <div
+                  class="space-y-6 text-sm md:text-base text-gray-600 leading-relaxed font-light"
+                >
+                  <p>
+                    Sonata Music School es una academia de música que necesitaba digitalizar
+                    su proceso de reservación de clases. Este fue mi primer proyecto como freelancer,
+                    y aunque fue desafiante, me permitió aplicar todo lo aprendido y descubrir
+                    mi pasión por crear soluciones web.
+                  </p>
+                  <p>
+                    Desarrollé una plataforma completa donde estudiantes pueden ver la disponibilidad
+                    de profesores por instrumento, reservar clases individuales o paquetes,
+                    y gestionar su calendario. Los profesores tienen su propio panel para marcar
+                    disponibilidad, y el administrador puede supervisar todo desde un dashboard central.
+                  </p>
+                  <p>
+                    Utilicé Laravel Livewire para crear una experiencia interactiva sin complejidad
+                    innecesaria. El stack TALL (TailwindCSS, Alpine.js, Laravel, Livewire) demostró
+                    ser perfecto para este proyecto, permitiéndome entregar una aplicación moderna
+                    y funcional.
+                  </p>
+                  <p class="italic text-gray-500">
+                    Este proyecto marcó el inicio de mi carrera freelance y confirmó mi decisión
+                    de especializarme en desarrollo Laravel.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Key Features Section -->
+              <div class="space-y-6">
+                <h3 class="text-xl serif-font text-gray-900">Funcionalidades Clave</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="music" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Reservación por Instrumento</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Estudiantes seleccionan instrumento y ven profesores disponibles.
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="calendar" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Gestión de Disponibilidad</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Profesores marcan horarios disponibles con calendario interactivo.
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="package" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Paquetes de Clases</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Sistema de créditos para clases individuales o paquetes.
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                      <i data-lucide="bell" class="w-4 h-4 text-blue-500"></i>
+                      <h4 class="text-sm font-bold text-gray-900">Notificaciones Email</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Confirmaciones y recordatorios automáticos de clases.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Challenges & Solutions -->
+              <div class="space-y-6 bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-xl serif-font text-gray-900">Aprendizajes del Proyecto</h3>
+                <div class="space-y-4">
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-2">Primer Contacto con Livewire</h4>
+                    <p class="text-sm text-gray-600">
+                      Este proyecto fue mi introducción a Livewire. La curva de aprendizaje fue
+                      empinada al principio, pero me permitió crear componentes reactivos sin
+                      necesidad de escribir JavaScript complejo. El sistema de calendario se
+                      benefició enormemente de la reactividad de Livewire.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-2">Gestión de Cliente Real</h4>
+                    <p class="text-sm text-gray-600">
+                      Aprendí la importancia de comunicación constante, establecer expectativas
+                      claras y documentar decisiones. Las reuniones semanales ayudaron a mantener
+                      el proyecto alineado con las necesidades del cliente.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-gray-900 mb-2">Arquitectura Escalable</h4>
+                    <p class="text-sm text-gray-600">
+                      Desde el inicio implementé buenas prácticas: repositorios, service classes,
+                      y testing básico. Aunque el alcance era pequeño, esta base permitió agregar
+                      funcionalidades fácilmente cuando el cliente las solicitó.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Results Section -->
+              <div class="space-y-6">
+                <h3 class="text-xl serif-font text-gray-900">Resultados</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div class="text-center p-6 bg-white border border-gray-200">
+                    <div class="text-3xl serif-font text-blue-500 mb-2">100+</div>
+                    <div class="text-xs text-gray-600 uppercase tracking-widest">Clases reservadas/mes</div>
+                  </div>
+                  <div class="text-center p-6 bg-white border border-gray-200">
+                    <div class="text-3xl serif-font text-blue-500 mb-2">15</div>
+                    <div class="text-xs text-gray-600 uppercase tracking-widest">Profesores activos</div>
+                  </div>
+                  <div class="text-center p-6 bg-white border border-gray-200">
+                    <div class="text-3xl serif-font text-blue-500 mb-2">1°</div>
+                    <div class="text-xs text-gray-600 uppercase tracking-widest">Proyecto freelance</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Personal Note -->
+              <div class="border-l-4 border-blue-500 pl-6 py-4 bg-blue-50">
+                <p class="text-sm text-gray-700 italic">
+                  "Este proyecto fue fundamental en mi carrera. No solo validó mis habilidades técnicas,
+                  sino que me enseñó el valor de escuchar al cliente, iterar rápido, y mantener
+                  el código limpio desde el día uno. Cada línea de código fue un aprendizaje."
+                </p>
+                <p class="text-xs text-gray-500 mt-2">- Miguel Bonifaz</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Navigation -->
+      <section class="w-full thin-border-top bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+          <div class="flex justify-between items-center">
+            <!-- Prev Project -->
+            <a href="segob.html" class="group text-left">
+              <span
+                class="block text-xs text-gray-400 uppercase tracking-widest mb-1 group-hover:text-black transition-colors"
+                >Anterior</span
+              >
+              <span
+                class="block text-lg md:text-xl serif-font text-gray-600 group-hover:text-black transition-colors"
+                >Segob Noticias</span
+              >
+            </a>
+
+            <!-- Next Project -->
+            <a href="beaubella.html" class="group text-right">
+              <span
+                class="block text-xs text-gray-400 uppercase tracking-widest mb-1 group-hover:text-black transition-colors"
+                >Siguiente</span
+              >
+              <span
+                class="block text-lg md:text-xl serif-font text-gray-600 group-hover:text-black transition-colors"
+                >Beaubella</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="w-full thin-border-top bg-gray-50">
+        <div class="max-w-3xl mx-auto px-6 py-20 text-center space-y-6">
+          <h2 class="serif-font text-3xl md:text-4xl text-gray-800">
+            ¿Tienes un proyecto en mente?
+          </h2>
+          <p class="text-sm text-gray-600">
+            Estoy disponible para proyectos freelance y colaboraciones.
+          </p>
+          <a
+            href="index.html#contact"
+            class="inline-block mt-4 px-8 py-3 bg-gray-900 text-white text-xs uppercase tracking-widest hover:bg-gray-700 transition-colors"
+          >
+            Contáctame
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full thin-border-top py-4 bg-white z-10 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-xs md:text-sm text-gray-600"
+        >
+          <div class="hover:text-black cursor-pointer transition-colors">
+            <a href="index.html">© Miguel Bonifaz</a>
+          </div>
+          <div class="hover:text-black cursor-pointer transition-colors">
+            <a href="mailto:miguel@bonifaz.dev">miguel@bonifaz.dev</a>
+          </div>
+          <div class="hover:text-black cursor-pointer transition-colors">
+            <a href="index.html#contact">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      function updateClock() {
+        const now = new Date();
+        const options = {
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        };
+        let timeString = now.toLocaleDateString("es-ES", options);
+        document.getElementById("clock").textContent = timeString;
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  </body>
+</html>

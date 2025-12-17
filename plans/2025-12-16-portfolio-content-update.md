@@ -96,11 +96,11 @@ Reemplazar proyectos genéricos con proyectos reales:
 ## Fase 3: Actualización de Página de Automatizaciones (automations.html)
 
 ### Hero Section
-- [ ] Mantener diseño con efecto glow
-- [ ] Revisar copy para que refleje experiencia real
+- [x] Mantener diseño con efecto glow
+- [x] Revisar copy para que refleje experiencia real
 
 ### Sección de Agentes
-- [ ] **Agente 1: Bonifaz Peluqueros** (EN VIVO)
+- [x] **Agente 1: Bonifaz Peluqueros** (EN VIVO)
   - Status: Agente en Vivo (green dot)
   - Descripción: Bot de agendamiento de citas vía WhatsApp
   - Funcionalidades:
@@ -110,7 +110,7 @@ Reemplazar proyectos genéricos con proyectos reales:
     - Sincronización con calendario
   - Icono: scissors
 
-- [ ] **Agente 2: Dulce Sabor** (EN DESARROLLO)
+- [x] **Agente 2: Dulce Sabor** (EN DESARROLLO)
   - Status: En Desarrollo (yellow/orange dot)
   - Descripción: Asistente para pastelería
   - Funcionalidades:
@@ -121,40 +121,40 @@ Reemplazar proyectos genéricos con proyectos reales:
   - Icono: cake o coffee
 
 ### Tech Stack
-- [ ] Actualizar stack tecnológico si es necesario
-- [ ] Mantener: OpenAI API, WhatsApp Business, etc.
+- [x] Actualizar stack tecnológico si es necesario
+- [x] Mantener: OpenAI API, WhatsApp Business, etc.
 
 ## Fase 4: Crear Página de Detalle de Proyectos (project-detail.html)
 
 Esta página debe ser dinámica o tener variaciones para cada proyecto. Se necesita:
 
-- [ ] Implementar sistema de query params (?project=nombre) o crear páginas individuales
-- [ ] Crear template base reutilizable
-- [ ] Crear contenido detallado para cada proyecto:
+- [x] Implementar sistema de query params (?project=nombre) o crear páginas individuales
+- [x] Crear template base reutilizable
+- [x] Crear contenido detallado para cada proyecto:
 
 ### Bonifaz Peluqueros
-- [ ] Hero con imagen principal
-- [ ] Descripción completa del proyecto
-- [ ] Galería de imágenes (usar las disponibles en folder)
-- [ ] Tecnologías utilizadas
-- [ ] Desafíos y soluciones
-- [ ] Resultados/impacto
+- [x] Hero con imagen principal
+- [x] Descripción completa del proyecto
+- [x] Galería de imágenes (usar las disponibles en folder)
+- [x] Tecnologías utilizadas
+- [x] Desafíos y soluciones
+- [x] Resultados/impacto
 
 ### Exchange EC
-- [ ] Contenido similar al anterior
-- [ ] Destacar funcionalidades clave
-- [ ] Screenshots del panel admin
+- [x] Contenido similar al anterior
+- [x] Destacar funcionalidades clave
+- [x] Screenshots del panel admin
 
 ### Segob Noticias
-- [ ] Enfoque en CMS y gestión de contenido
-- [ ] Screenshots relevantes
+- [x] Enfoque en CMS y gestión de contenido
+- [x] Screenshots relevantes
 
 ### Sonata
-- [ ] Primer proyecto freelance
-- [ ] Historia del proyecto
+- [x] Primer proyecto freelance
+- [x] Historia del proyecto
 
 ### Beaubella
-- [ ] Enfoque en solución mixta con Filament
+- [x] Enfoque en solución mixta con Filament
 
 ## Fase 5: Optimización de Assets
 
