@@ -26,7 +26,7 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
                 alt={`${projectTitle} - Imagen ${index + 1}`}
                 width={1200}
                 height={675}
-                className="w-full h-auto grayscale-img group-hover:filter-none group-hover:opacity-100 transition-all duration-500"
+                className="w-full h-auto"
                 onClick={() => setSelectedImage(image)}
               />
             </div>

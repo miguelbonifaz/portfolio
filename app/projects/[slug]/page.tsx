@@ -118,13 +118,13 @@ export default async function ProjectDetailPage({
             </div>
 
             {/* Main Hero Image */}
-            <div className="w-full aspect-[21/9] bg-gray-100 overflow-hidden mb-12">
+            <div className="w-full bg-gray-100 overflow-hidden mb-12 flex items-center justify-center">
               <Image
                 src={project.images.hero}
                 alt={project.title}
                 width={1920}
                 height={820}
-                className="w-full h-full object-cover grayscale-img hover:filter-none hover:opacity-100 transition-all duration-500"
+                className="w-full h-auto object-contain"
                 priority
               />
             </div>
