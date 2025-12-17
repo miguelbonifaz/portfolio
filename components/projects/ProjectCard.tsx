@@ -1,22 +1,28 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Project } from '@/data/types'
+import Image from "next/image";
+import Link from "next/link";
+import { Project } from "@/data/types";
 
 interface ProjectCardProps {
-  project: Project
-  className?: string
+  project: Project;
+  className?: string;
 }
 
-export default function ProjectCard({ project, className = '' }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  className = "",
+}: ProjectCardProps) {
   return (
-    <Link href={`/projects/${project.slug}`} className={`group cursor-pointer block ${className}`}>
-      <div className="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
+    <Link
+      href={`/projects/${project.slug}`}
+      className={`group cursor-pointer block ${className}`}
+    >
+      <div className="bg-gray-100 overflow-hidden mb-4">
         <Image
           src={project.images.thumbnail}
           alt={project.title}
           width={600}
           height={450}
-          className="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
+          className="w-full h-auto grayscale-img group-hover:filter-none group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out"
         />
       </div>
       <div className="flex justify-between items-start">
@@ -31,5 +37,5 @@ export default function ProjectCard({ project, className = '' }: ProjectCardProp
         </span>
       </div>
     </Link>
-  )
+  );
 }

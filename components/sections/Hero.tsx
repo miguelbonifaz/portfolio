@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Linkedin, Twitter } from 'lucide-react'
-import { profile } from '@/data/profile'
+import Image from "next/image";
+import Link from "next/link";
+import { Linkedin, Twitter } from "lucide-react";
+import { profile } from "@/data/profile";
 
 export default function Hero() {
   return (
@@ -11,30 +11,26 @@ export default function Hero() {
     >
       {/* Portrait Image */}
       <div className="mb-0 relative">
-        <div className="w-48 h-56 md:w-64 md:h-72 overflow-hidden mx-auto relative z-10">
+        <div className="w-48 h-48 md:w-64 md:h-64 overflow-hidden mx-auto relative z-10 rounded-full">
           <Image
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-            alt="Portrait"
+            src="/assets/images/miguel/miguel-bonifaz.png"
+            alt="Miguel Bonifaz"
             width={500}
-            height={600}
+            height={500}
             className="w-full h-full object-cover grayscale-img"
-            style={{
-              clipPath: 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)',
-              transform: 'scale(1.1)',
-            }}
             priority
           />
         </div>
       </div>
 
       {/* Horizontal line */}
-      <div className="w-full max-w-md border-t border-gray-400 mb-4"></div>
+      <div className="w-full max-w-xs border-t border-gray-400 my-8"></div>
 
       {/* Intro Text */}
       <div className="space-y-1">
-        <p className="text-sm md:text-base text-gray-600">¡Hola! Soy--</p>
+        <p className="text-sm md:text-base text-gray-600">¡Hola! Soy</p>
         <h1 className="text-5xl md:text-7xl text-gray-800 serif-font tracking-wide mb-6">
-          Miguel
+          Miguel Bonifaz
         </h1>
       </div>
 
@@ -63,15 +59,20 @@ export default function Hero() {
           </div>
 
           {/* Right: Email */}
-          <div className="text-gray-500 text-sm">miguelbonifaz126@gmail.com</div>
+          <a
+            href="mailto:miguelbonifaz126@gmail.com"
+            className="text-gray-500 text-sm hover:text-black transition-colors"
+          >
+            miguelbonifaz126@gmail.com
+          </a>
         </div>
 
         {/* Bottom Details */}
         <div className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-500 mt-2">
           <div>Laravel Developer</div>
-          <div className="mt-2 md:mt-0">Basado en Guayaquil, Ecuador</div>
+          <div className="mt-2 md:mt-0">Guayaquil, Ecuador 🇪🇨</div>
         </div>
       </div>
     </section>
-  )
+  );
 }

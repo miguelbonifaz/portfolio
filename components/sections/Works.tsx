@@ -4,9 +4,7 @@ import { projects } from '@/data/projects'
 import ProjectCard from '@/components/projects/ProjectCard'
 
 export default function Works() {
-  // Get featured projects and separate the last one for full-width display
-  const featuredProjects = projects.filter((p) => p.featured).slice(0, 4)
-  const lastProject = projects.find((p) => p.slug === 'beaubella')
+  const featuredProjects = projects.filter((p) => p.featured)
 
   return (
     <section id="works" className="w-full thin-border-top bg-white">
@@ -28,14 +26,6 @@ export default function Works() {
                 />
               ))}
             </div>
-
-            {/* Last Project (Full Width) */}
-            {lastProject && (
-              <ProjectCard
-                project={lastProject}
-                className="mt-16 border-t border-gray-100 pt-16"
-              />
-            )}
 
             {/* View More Button */}
             <div className="mt-20 flex justify-center">

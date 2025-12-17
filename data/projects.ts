@@ -105,7 +105,7 @@ El sistema gestiona citas, clientes, servicios, inventario de productos, y gener
     year: 2023,
     category: 'Web Application',
     technologies: ['Laravel', 'Filament', 'TailwindCSS', 'Alpine.js'],
-    featured: false,
+    featured: true,
     images: {
       thumbnail: '/assets/images/projects/beaubella/beaubella-hero.png',
       hero: '/assets/images/projects/beaubella/beaubella-hero.png',

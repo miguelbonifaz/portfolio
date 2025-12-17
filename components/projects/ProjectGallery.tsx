@@ -20,13 +20,13 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
       <div className="space-y-8">
         {images.map((image, index) => (
           <div key={index} className="space-y-2">
-            <div className="bg-gray-100 aspect-[16/9] overflow-hidden cursor-pointer group">
+            <div className="bg-gray-100 overflow-hidden cursor-pointer group">
               <Image
                 src={image}
                 alt={`${projectTitle} - Imagen ${index + 1}`}
                 width={1200}
                 height={675}
-                className="w-full h-full object-cover grayscale-img group-hover:filter-none group-hover:opacity-100 transition-all duration-500"
+                className="w-full h-auto grayscale-img group-hover:filter-none group-hover:opacity-100 transition-all duration-500"
                 onClick={() => setSelectedImage(image)}
               />
             </div>
