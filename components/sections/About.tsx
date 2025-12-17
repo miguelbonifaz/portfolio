@@ -1,4 +1,4 @@
-import { experience, skills } from '@/data/skills'
+import { experience, skills } from "@/data/skills";
 
 export default function About() {
   return (
@@ -6,17 +6,22 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Label Column */}
-          <div className="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit">
+          <div className="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase">
             (01) &mdash; Acerca de
           </div>
 
           {/* Content Column */}
           <div className="md:col-span-9 space-y-12">
             <h2 className="text-2xl md:text-3xl leading-relaxed font-light text-gray-800">
-              Desarrollador Laravel con más de 5 años de experiencia. Apasionado por la
-              <span className="serif-font italic"> programación y el aprendizaje constante</span>.
-              Implemento testing en todos mis proyectos para permitir upgrades seguros.
-              Utilizo IA en mi flujo de trabajo para acelerar el desarrollo.
+              Desarrollador Laravel con más de 5 años de experiencia. Apasionado
+              por la
+              <span className="serif-font italic">
+                {" "}
+                programación y el aprendizaje constante
+              </span>
+              . Implemento testing en todos mis proyectos para permitir upgrades
+              seguros. Utilizo IA en mi flujo de trabajo para acelerar el
+              desarrollo.
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-gray-100">
@@ -87,5 +92,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

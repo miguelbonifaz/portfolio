@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full px-6 py-4 border-b border-[#e5e5e5] text-xs md:text-sm text-gray-600 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
+      <header className="w-full px-6 py-4 border-b border-[#e5e5e5] text-xs md:text-sm text-gray-600 sticky top-0 bg-white z-50 shadow-sm">
         <div className="flex justify-between items-center">
           <Link href="/" className="font-bold text-black tracking-tight hover:opacity-70 transition-opacity z-50">
             Miguel Bonifaz

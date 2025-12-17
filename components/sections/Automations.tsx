@@ -40,7 +40,7 @@ export default function Automations() {
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Label Column */}
-          <div className="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit">
+          <div className="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase">
             (03) &mdash; Automatizaciones
           </div>
 
