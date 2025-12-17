@@ -1,0 +1,146 @@
+import Link from 'next/link'
+import { Scissors, Cake, Check, ArrowUpRight } from 'lucide-react'
+import { automations } from '@/data/automations'
+
+export default function Automations() {
+  const getStatusBadge = (status: string) => {
+    if (status === 'live') {
+      return (
+        <div className="flex items-center space-x-2 mb-6">
+          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span className="text-xs uppercase tracking-widest text-gray-400">
+            Agente en Vivo
+          </span>
+        </div>
+      )
+    }
+    return (
+      <div className="flex items-center space-x-2 mb-6">
+        <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
+        <span className="text-xs uppercase tracking-widest text-gray-400">
+          En Desarrollo
+        </span>
+      </div>
+    )
+  }
+
+  const getIcon = (iconName: string) => {
+    switch (iconName) {
+      case 'scissors':
+        return <Scissors className="w-12 h-12 stroke-[1px]" />
+      case 'cake':
+        return <Cake className="w-12 h-12 stroke-[1px]" />
+      default:
+        return <Scissors className="w-12 h-12 stroke-[1px]" />
+    }
+  }
+
+  return (
+    <section id="automations" className="w-full thin-border-top bg-gray-50/50">
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          {/* Label Column */}
+          <div className="md:col-span-3 text-gray-400 text-xs tracking-widest uppercase sticky top-24 h-fit">
+            (03) &mdash; Automatizaciones
+          </div>
+
+          {/* Content Column */}
+          <div className="md:col-span-9">
+            <div className="mb-12">
+              <h2 className="serif-font text-3xl md:text-4xl text-gray-900 mb-4">
+                Agentes de IA Conversacional
+              </h2>
+              <p className="text-sm md:text-base text-gray-600 font-light max-w-2xl leading-relaxed">
+                Además del desarrollo web, creo agentes inteligentes de WhatsApp que
+                automatizan operaciones comerciales. Desde agendamiento hasta calificación
+                de leads, estos bots trabajan 24/7.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Agent 1: Bonifaz Peluqueros */}
+              <div className="bg-white p-8 border border-gray-200 group hover:border-gray-400 transition-colors relative overflow-hidden">
+                <div className="absolute top-4 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">
+                  <Scissors className="w-12 h-12 stroke-[1px]" />
+                </div>
+
+                <div className="flex items-center space-x-2 mb-6">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  <span className="text-xs uppercase tracking-widest text-gray-400">
+                    Agente en Vivo
+                  </span>
+                </div>
+
+                <h3 className="serif-font text-2xl text-gray-900 mb-2">
+                  Bonifaz Peluqueros
+                </h3>
+                <p className="text-sm text-gray-500 mb-6 min-h-[40px]">
+                  Bot de agendamiento de citas que gestiona sincronización de calendario,
+                  reprogramación y consultas del menú de servicios.
+                </p>
+
+                <ul className="space-y-2 mb-8">
+                  <li className="flex items-center text-xs text-gray-600">
+                    <Check className="w-3 h-3 mr-2 text-gray-400" />
+                    Reserva automática vía WhatsApp
+                  </li>
+                  <li className="flex items-center text-xs text-gray-600">
+                    <Check className="w-3 h-3 mr-2 text-gray-400" />
+                    Recordatorios para reducir ausencias
+                  </li>
+                </ul>
+
+                <Link
+                  href="/automations#agents"
+                  className="inline-flex items-center text-xs uppercase tracking-widest text-black border-b border-black pb-1 hover:opacity-60 transition-opacity"
+                >
+                  Ver Flujo Lógico
+                  <ArrowUpRight className="w-3 h-3 ml-1" />
+                </Link>
+              </div>
+
+              {/* Agent 2: Dulce Sabor */}
+              <div className="bg-white p-8 border border-gray-200 group hover:border-gray-400 transition-colors relative overflow-hidden">
+                <div className="absolute top-4 right-4 text-gray-100 group-hover:text-gray-200 transition-colors">
+                  <Cake className="w-12 h-12 stroke-[1px]" />
+                </div>
+
+                <div className="flex items-center space-x-2 mb-6">
+                  <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
+                  <span className="text-xs uppercase tracking-widest text-gray-400">
+                    En Desarrollo
+                  </span>
+                </div>
+
+                <h3 className="serif-font text-2xl text-gray-900 mb-2">Dulce Sabor</h3>
+                <p className="text-sm text-gray-500 mb-6 min-h-[40px]">
+                  Asistente virtual para pastelería que cotiza tortas personalizadas,
+                  informa sobre productos y gestiona disponibilidad.
+                </p>
+
+                <ul className="space-y-2 mb-8">
+                  <li className="flex items-center text-xs text-gray-600">
+                    <Check className="w-3 h-3 mr-2 text-gray-400" />
+                    Cotización de tortas personalizadas
+                  </li>
+                  <li className="flex items-center text-xs text-gray-600">
+                    <Check className="w-3 h-3 mr-2 text-gray-400" />
+                    Consulta de disponibilidad de fechas
+                  </li>
+                </ul>
+
+                <Link
+                  href="/automations#agents"
+                  className="inline-flex items-center text-xs uppercase tracking-widest text-black border-b border-black pb-1 hover:opacity-60 transition-opacity"
+                >
+                  Ver Flujo Lógico
+                  <ArrowUpRight className="w-3 h-3 ml-1" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-space-mono);
+  --font-serif: var(--font-playfair);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-mono), monospace;
+}
+
+.serif-font {
+  font-family: var(--font-playfair), serif;
+}
+
+.thin-border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.thin-border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.grayscale-img {
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+.pill-badge {
+  border: 1px solid #4a6cf7;
+  color: #4a6cf7;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  padding: 2px 12px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.pill-badge:hover {
+  background-color: #4a6cf7;
+  color: white;
+}
