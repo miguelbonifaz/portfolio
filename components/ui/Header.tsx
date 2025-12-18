@@ -1,50 +1,62 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import { Linkedin, Twitter, Sparkles, Menu, X } from 'lucide-react'
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Linkedin, Twitter, Sparkles, Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [currentTime, setCurrentTime] = useState('')
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentTime, setCurrentTime] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateClock = () => {
-      const now = new Date()
+      const now = new Date();
       const options: Intl.DateTimeFormatOptions = {
-        month: 'short',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
         hour12: true,
-      }
-      const timeString = now.toLocaleDateString('es-ES', options)
-      setCurrentTime(timeString)
-    }
+      };
+      const timeString = now.toLocaleDateString("es-ES", options);
+      setCurrentTime(timeString);
+    };
 
-    updateClock()
-    const interval = setInterval(updateClock, 1000)
+    updateClock();
+    const interval = setInterval(updateClock, 1000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
       <header className="w-full px-6 py-4 border-b border-[#e5e5e5] text-xs md:text-sm text-gray-600 sticky top-0 bg-white z-50 shadow-sm backdrop-blur-sm bg-white/95 animate-fade-in">
         <div className="flex justify-between items-center">
-          <Link href="/" className="font-bold text-black tracking-tight smooth-color hover:opacity-70 z-50">
+          <Link
+            href="/"
+            className="font-medium text-base text-black tracking-tight hover:opacity-70 z-50"
+          >
             Miguel Bonifaz
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-12 items-center">
-            <Link href="/" className="link-underline smooth-color hover:text-black">
+            <Link
+              href="/"
+              className="link-underline smooth-color hover:text-black"
+            >
               Inicio
             </Link>
-            <Link href="/#about" className="link-underline smooth-color hover:text-black">
+            <Link
+              href="/#about"
+              className="link-underline smooth-color hover:text-black"
+            >
               Acerca de
             </Link>
-            <Link href="/#works" className="link-underline smooth-color hover:text-black">
+            <Link
+              href="/#works"
+              className="link-underline smooth-color hover:text-black"
+            >
               Trabajos
             </Link>
             <Link href="/automations" className="relative group">
@@ -54,14 +66,17 @@ export default function Header() {
                 <Sparkles className="w-3 h-3 text-yellow-300 smooth-color group-hover:rotate-12" />
               </div>
             </Link>
-            <Link href="/#contact" className="link-underline smooth-color hover:text-black">
+            <Link
+              href="/#contact"
+              className="link-underline smooth-color hover:text-black"
+            >
               Contacto
             </Link>
           </nav>
 
           {/* Clock - Desktop only */}
           <div className="hidden md:block text-right text-gray-500 w-[140px] animate-fade-in delay-200">
-            {currentTime || 'Loading...'}
+            {currentTime || "Loading..."}
           </div>
 
           {/* Mobile Menu Button */}
@@ -127,5 +142,5 @@ export default function Header() {
         </div>
       )}
     </>
-  )
+  );
 }

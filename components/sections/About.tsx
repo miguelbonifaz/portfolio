@@ -28,8 +28,8 @@ export default function About() {
                   : "opacity-0 translate-y-5"
               }`}
             >
-              Desarrollador Laravel con más de 5 años de experiencia. Apasionado
-              por la
+              Desarrollador Laravel con más de 5 años de experiencia.
+              -Apasionado por la
               <span className="serif-font italic">
                 {" "}
                 programación y el aprendizaje constante

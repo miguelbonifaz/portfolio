@@ -55,9 +55,8 @@ export default function Automations() {
                 Agentes de IA Conversacional
               </h2>
               <p className={`text-sm md:text-base text-gray-600 font-light max-w-2xl leading-relaxed transition-all duration-600 ${isVisible ? 'animate-fade-in-up delay-200' : 'opacity-0 translate-y-5'}`}>
-                Además del desarrollo web, creo agentes inteligentes de WhatsApp que
-                automatizan operaciones comerciales. Desde agendamiento hasta calificación
-                de leads, estos bots trabajan 24/7.
+                Diseño agentes de IA conversacional que automatizan procesos empresariales vía WhatsApp.
+                Mejoran eficiencia operativa, reducen costes y aceleran respuestas al cliente trabajando 24/7.
               </p>
             </div>
 
@@ -79,8 +78,8 @@ export default function Automations() {
                   Bonifaz Peluqueros
                 </h3>
                 <p className="text-sm text-gray-500 mb-6 min-h-[40px]">
-                  Bot de agendamiento de citas que gestiona sincronización de calendario,
-                  reprogramación y consultas del menú de servicios.
+                  Maneja todo el flujo de citas desde WhatsApp: agendamiento, reprogramación, cancelación
+                  y consultas. También envía recordatorios vía WhatsApp.
                 </p>
 
                 <ul className="space-y-2 mb-8">
@@ -98,7 +97,7 @@ export default function Automations() {
                   href="/automations#agents"
                   className="inline-flex items-center text-xs uppercase tracking-widest text-black border-b border-black pb-1 smooth-color hover:opacity-60"
                 >
-                  Ver Flujo Lógico
+                  Conocer más...
                   <ArrowUpRight className="w-3 h-3 ml-1 smooth-color group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>
               </div>
@@ -137,7 +136,7 @@ export default function Automations() {
                   href="/automations#agents"
                   className="inline-flex items-center text-xs uppercase tracking-widest text-black border-b border-black pb-1 smooth-color hover:opacity-60 group"
                 >
-                  Ver Flujo Lógico
+                  Conocer más...
                   <ArrowUpRight className="w-3 h-3 ml-1 smooth-color group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>
               </div>

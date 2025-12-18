@@ -143,7 +143,7 @@ export default function AutomationsPage() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <Zap className="w-8 h-8" />
-                <span className="text-xs font-bold">n8n / Make</span>
+                <span className="text-xs font-bold">n8n</span>
               </div>
             </div>
           </div>
