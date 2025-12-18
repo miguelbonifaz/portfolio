@@ -3,7 +3,7 @@ import { getAllProjects } from '@/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projects = getAllProjects()
-  const baseUrl = 'https://miguelbonifaz.dev'
+  const baseUrl = 'https://miguelbonifaz.com'
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

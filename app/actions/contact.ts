@@ -91,7 +91,7 @@ export async function submitContactForm(
 
     // Email to yourself
     await transporter.sendMail({
-      from: process.env.MAILTRAP_FROM || 'portfolio@miguelbonifaz.dev',
+      from: process.env.MAILTRAP_FROM || 'portfolio@miguelbonifaz.com',
       to: process.env.CONTACT_EMAIL || 'miguelbonifaz126@gmail.com',
       subject: `Nuevo mensaje de contacto de ${validatedData.name}`,
       html: `
@@ -176,7 +176,7 @@ export async function submitContactForm(
               </div>
             </div>
             <div class="footer">
-              <p>Este mensaje fue enviado desde tu portfolio en miguelbonifaz.dev</p>
+              <p>Este mensaje fue enviado desde tu portfolio en miguelbonifaz.com</p>
             </div>
           </body>
         </html>
@@ -191,13 +191,13 @@ Mensaje:
 ${validatedData.message}
 
 ---
-Este mensaje fue enviado desde tu portfolio en miguelbonifaz.dev
+Este mensaje fue enviado desde tu portfolio en miguelbonifaz.com
       `,
     })
 
     // Auto-reply to sender
     await transporter.sendMail({
-      from: process.env.MAILTRAP_FROM || 'portfolio@miguelbonifaz.dev',
+      from: process.env.MAILTRAP_FROM || 'portfolio@miguelbonifaz.com',
       to: validatedData.email,
       subject: 'Gracias por tu mensaje - Miguel Bonifaz',
       html: `
@@ -254,7 +254,7 @@ Este mensaje fue enviado desde tu portfolio en miguelbonifaz.dev
               <p>He recibido tu mensaje y te responderé lo antes posible, generalmente en las próximas 24-48 horas.</p>
               <p>Mientras tanto, puedes:</p>
               <ul>
-                <li>Ver mis proyectos en <a href="https://miguelbonifaz.dev/#works" style="color: #1f2937;">mi portfolio</a></li>
+                <li>Ver mis proyectos en <a href="https://miguelbonifaz.com/#works" style="color: #1f2937;">mi portfolio</a></li>
                 <li>Conectar conmigo en <a href="https://www.linkedin.com/in/miguelbonifaz126/" style="color: #1f2937;">LinkedIn</a></li>
                 <li>Seguirme en <a href="https://x.com/MBonifaz126" style="color: #1f2937;">X (Twitter)</a></li>
               </ul>
@@ -277,7 +277,7 @@ Hola ${validatedData.name},
 He recibido tu mensaje y te responderé lo antes posible, generalmente en las próximas 24-48 horas.
 
 Mientras tanto, puedes:
-- Ver mis proyectos en https://miguelbonifaz.dev/#works
+- Ver mis proyectos en https://miguelbonifaz.com/#works
 - Conectar conmigo en https://www.linkedin.com/in/miguelbonifaz126/
 - Seguirme en https://x.com/MBonifaz126
 

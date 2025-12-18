@@ -14,7 +14,7 @@ export function generatePersonSchema(profile: Profile) {
       addressLocality: profile.location,
     },
     image: profile.image,
-    url: 'https://miguelbonifaz.dev',
+    url: 'https://miguelbonifaz.com',
     sameAs: profile.socials.map((social) => social.url),
     knowsAbout: [
       'Laravel',
@@ -37,7 +37,7 @@ export function generateWebSiteSchema() {
     name: 'Miguel Bonifaz Portfolio',
     description:
       'Desarrollador Laravel con más de 5 años de experiencia. Especializado en Laravel, Vue.js, Livewire, Filament y automatizaciones con IA.',
-    url: 'https://miguelbonifaz.dev',
+    url: 'https://miguelbonifaz.com',
     author: {
       '@type': 'Person',
       name: 'Miguel Bonifaz',
@@ -61,7 +61,7 @@ export function generateWebPageSchema(
     isPartOf: {
       '@type': 'WebSite',
       name: 'Miguel Bonifaz Portfolio',
-      url: 'https://miguelbonifaz.dev',
+      url: 'https://miguelbonifaz.com',
     },
   }
 }
@@ -72,13 +72,13 @@ export function generateArticleSchema(project: Project) {
     '@type': 'Article',
     headline: project.title,
     description: project.shortDescription,
-    image: `https://miguelbonifaz.dev${project.images.hero}`,
+    image: `https://miguelbonifaz.com${project.images.hero}`,
     datePublished: `${project.year}-01-01T00:00:00.000Z`,
     dateModified: `${project.year}-01-01T00:00:00.000Z`,
     author: {
       '@type': 'Person',
       name: 'Miguel Bonifaz',
-      url: 'https://miguelbonifaz.dev',
+      url: 'https://miguelbonifaz.com',
     },
     publisher: {
       '@type': 'Person',
@@ -86,7 +86,7 @@ export function generateArticleSchema(project: Project) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://miguelbonifaz.dev/projects/${project.slug}`,
+      '@id': `https://miguelbonifaz.com/projects/${project.slug}`,
     },
     keywords: project.technologies.join(', '),
   }
@@ -100,7 +100,7 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://miguelbonifaz.dev${item.url}`,
+      item: `https://miguelbonifaz.com${item.url}`,
     })),
   }
 }

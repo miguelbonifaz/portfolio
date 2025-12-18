@@ -17,7 +17,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://miguelbonifaz.dev"),
+  metadataBase: new URL("https://miguelbonifaz.com"),
   title: {
     default: "Miguel Bonifaz - Desarrollador Laravel | Portafolio",
     template: "%s | Miguel Bonifaz",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://miguelbonifaz.dev/",
+    url: "https://miguelbonifaz.com/",
     siteName: "Miguel Bonifaz Portfolio",
     title: "Miguel Bonifaz - Desarrollador Laravel",
     description: "Desarrollador Laravel con más de 5 años de experiencia. Especializado en Laravel, Vue.js, Livewire, Filament y automatizaciones con IA.",

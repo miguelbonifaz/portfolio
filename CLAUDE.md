@@ -54,7 +54,7 @@ Next.js 15 App Router with SSG for all pages:
 - `components/seo/JsonLd.tsx` renders structured data
 
 **URL Structure:**
-- Base URL: `https://miguelbonifaz.dev` (set in `metadataBase`)
+- Base URL: `https://miguelbonifaz.com` (set in `metadataBase`)
 - Projects: `/projects/[slug]`
 - All URLs must update in two places when changing domain:
   1. `app/layout.tsx` - `metadataBase`
