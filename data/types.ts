@@ -36,7 +36,6 @@ export interface Project {
   title: string
   shortDescription: string
   longDescription: string
-  year: number
   category: string
   technologies: string[]
   featured: boolean

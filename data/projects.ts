@@ -15,7 +15,6 @@ Desarrollé un sistema completo que permite a los clientes agendar citas en lín
 El proyecto se construyó con Vue.js e Inertia.js para una experiencia de usuario fluida tipo SPA, aprovechando la potencia de Laravel en el backend. El sistema incluye gestión de múltiples profesionales, catálogo de servicios con precios, notificaciones automáticas por email y WhatsApp.
 
 Los resultados fueron inmediatos: reducción mas del 50% en llamadas telefónicas para agendar citas, mejor organización del día a día del negocio, y alta satisfacción de clientes que ahora reservan cómodamente desde la web sin necesidad de llamar.`,
-    year: 2024,
     category: "Web Application",
     technologies: ["Laravel", "Vue.js", "Inertia.js", "TailwindCSS", "MySQL"],
     featured: true,
@@ -41,7 +40,6 @@ Los resultados fueron inmediatos: reducción mas del 50% en llamadas telefónica
     longDescription: `Exchange EC es una organización que gestiona programas de intercambio estudiantil a nivel internacional. Necesitaban una plataforma robusta para administrar estudiantes, programas, pagos y documentación de manera centralizada.
 
 Desarrollé un sistema completo utilizando Laravel y Filament que permite gestionar todo el ciclo de vida de un estudiante: desde la inscripción inicial, gestión de documentos, seguimiento de pagos en múltiples cuotas, hasta la asignación de programas y destinos.`,
-    year: 2024,
     category: "Web Application",
     technologies: ["Laravel", "Filament", "MySQL"],
     featured: true,
@@ -66,7 +64,6 @@ Desarrollé un sistema completo utilizando Laravel y Filament que permite gestio
     longDescription: `La Secretaría de Gobernación de México necesitaba un portal de noticias moderno y escalable para publicar comunicados oficiales, noticias y actualizaciones gubernamentales. El proyecto requería un CMS potente pero intuitivo que permitiera a múltiples editores gestionar contenido de forma simultánea.
 
 Desarrollé la plataforma utilizando Laravel, Filament, Vue.js e Inertia.js, creando un sistema de gestión de contenido que incluye categorización, gestión de medios (documentos PDF, galerías fotográficas, videos y audios), y SEO.`,
-    year: 2023,
     category: "Web Application",
     technologies: ["Laravel", "Filament", "Vue.js", "Inertia.js", "MySQL"],
     featured: true,
@@ -95,7 +92,6 @@ Desarrollé una plataforma completa donde estudiantes pueden ver la disponibilid
 Utilicé Laravel Livewire para crear una experiencia interactiva sin complejidad innecesaria. El stack TALL (TailwindCSS, Alpine.js, Laravel, Livewire) demostró ser perfecto para este proyecto, permitiéndome entregar una aplicación moderna y funcional.
 
 Este proyecto marcó el inicio de mi carrera freelance y confirmó mi decisión de especializarme en desarrollo Laravel.`,
-    year: 2022,
     category: "Web Application",
     technologies: ["Laravel", "Livewire", "TailwindCSS", "Alpine.js"],
     featured: false,
@@ -119,7 +115,6 @@ Este proyecto marcó el inicio de mi carrera freelance y confirmó mi decisión 
 Desarrollé una plataforma completa utilizando Laravel, Livewire y Filament que gestiona el ciclo completo del negocio desde el panel administrativo: registro de citas con asignación de profesionales y servicios, control de inventario cuando se utilizan productos durante los tratamientos, y registro de pagos realizados. El sistema incluye gestión de múltiples sucursales y un sistema de roles que permite a administradores, personal de mostrador y profesionales acceder según sus responsabilidades.
 
 La plataforma genera reportes detallados en Excel y PDF para análisis de ventas, uso de productos, y rendimiento por profesional o sucursal, permitiendo a los dueños tomar decisiones informadas sobre su negocio.`,
-    year: 2023,
     category: "Web Application",
     technologies: ["Laravel", "Filament", "TailwindCSS", "Alpine.js"],
     featured: true,

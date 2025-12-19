@@ -55,7 +55,6 @@ export async function generateMetadata({
       siteName: "Miguel Bonifaz Portfolio",
       title: `${project.title} | Miguel Bonifaz`,
       description: project.shortDescription,
-      publishedTime: `${project.year}-01-01T00:00:00.000Z`,
       authors: ["Miguel Bonifaz"],
       images: [
         {

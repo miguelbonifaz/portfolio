@@ -38,7 +38,6 @@ export const projectSchema = z.object({
   title: z.string(),
   shortDescription: z.string(),
   longDescription: z.string(),
-  year: z.number(),
   category: z.string(),
   technologies: z.array(z.string()),
   featured: z.boolean(),

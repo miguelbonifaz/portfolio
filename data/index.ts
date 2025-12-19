@@ -12,10 +12,10 @@ export function getProfile() {
 }
 
 /**
- * Get all projects, sorted by year (newest first)
+ * Get all projects
  */
 export function getAllProjects() {
-  return [...projects].sort((a, b) => b.year - a.year)
+  return [...projects]
 }
 
 /**

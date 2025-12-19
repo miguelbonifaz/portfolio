@@ -73,8 +73,6 @@ export function generateArticleSchema(project: Project) {
     headline: project.title,
     description: project.shortDescription,
     image: `https://miguelbonifaz.com${project.images.hero}`,
-    datePublished: `${project.year}-01-01T00:00:00.000Z`,
-    dateModified: `${project.year}-01-01T00:00:00.000Z`,
     author: {
       '@type': 'Person',
       name: 'Miguel Bonifaz',
