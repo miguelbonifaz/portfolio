@@ -54,9 +54,20 @@ export interface Project {
 
 export interface Automation {
   id: string
+  slug: string
   name: string
-  description: string
+  shortDescription: string
+  longDescription: string
   features: string[]
   status: 'live' | 'development' | 'planned'
   icon: string
+  videoUrl?: string
+  images: {
+    hero: string
+    gallery: string[]
+  }
+  cta?: {
+    text: string
+    url: string
+  }
 }

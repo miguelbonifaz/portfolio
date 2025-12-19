@@ -56,9 +56,20 @@ export const projectSchema = z.object({
 
 export const automationSchema = z.object({
   id: z.string(),
+  slug: z.string(),
   name: z.string(),
-  description: z.string(),
+  shortDescription: z.string(),
+  longDescription: z.string(),
   features: z.array(z.string()),
   status: z.enum(['live', 'development', 'planned']),
   icon: z.string(),
+  videoUrl: z.string().optional(),
+  images: z.object({
+    hero: z.string(),
+    gallery: z.array(z.string()),
+  }),
+  cta: z.object({
+    text: z.string(),
+    url: z.string().url(),
+  }).optional(),
 })

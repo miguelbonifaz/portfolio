@@ -40,6 +40,13 @@ export function getAutomations() {
 }
 
 /**
+ * Get an automation by slug
+ */
+export function getAutomationBySlug(slug: string) {
+  return automations.find((automation) => automation.slug === slug)
+}
+
+/**
  * Get experience data
  */
 export function getExperience() {
