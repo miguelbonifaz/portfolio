@@ -1,15 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  Check,
-  Play,
-  ExternalLink,
-  Bot,
-  MessageSquare,
-} from "lucide-react";
+import { ArrowLeft, Check, ExternalLink, Bot } from "lucide-react";
 import { getAutomations, getAutomationBySlug } from "@/data";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
@@ -140,33 +132,7 @@ export default async function AutomationDetailPage({
                   <p>{automation.longDescription}</p>
                 </div>
 
-                {/* Gallery */}
-                {automation.images.gallery.length > 0 && (
-                  <div className="mt-12">
-                    <h3 className="text-sm font-bold uppercase tracking-widest text-gray-900 mb-6">
-                      Demostración
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {automation.images.gallery.map((img, idx) => (
-                        <div
-                          key={idx}
-                          className="relative aspect-[4/5] md:aspect-square rounded-lg overflow-hidden bg-gray-100 border border-gray-100 shadow-sm hover:shadow-md transition-all"
-                        >
-                          <Image
-                            src={img}
-                            alt={`${automation.name} gallery ${idx + 1}`}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Sidebar / Features */}
-              <div className="lg:col-span-5 space-y-10">
+                {/* Funcionalidades Clave */}
                 <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
                   <h3 className="flex items-center space-x-2 serif-font text-xl text-gray-900 mb-6">
                     <Bot className="w-5 h-5 text-gray-500" />
@@ -186,24 +152,37 @@ export default async function AutomationDetailPage({
                     ))}
                   </ul>
                 </div>
+              </div>
 
-                {/* Tech Stack Hints */}
-                <div className="border-t border-gray-100 pt-8">
-                  <h3 className="text-xs uppercase tracking-widest text-gray-400 mb-4">
-                    Canales Integrados
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    <span className="inline-flex items-center px-3 py-1.5 rounded-md bg-green-50 text-green-700 text-xs border border-green-100">
-                      <MessageSquare className="w-3 h-3 mr-1.5" />
-                      WhatsApp Business
-                    </span>
-                    <span className="inline-flex items-center px-3 py-1.5 rounded-md bg-blue-50 text-blue-700 text-xs border border-blue-100">
-                      <Bot className="w-3 h-3 mr-1.5" />
-                      OpenAI GPT-4
-                    </span>
+              {/* Video Demo - Mobile Format */}
+              {automation.videoUrl && (
+                <div className="lg:col-span-5">
+                  <div className="sticky top-8">
+                    <div className="aspect-[9/16] relative rounded-xl overflow-hidden shadow-xl border border-gray-200 bg-black max-w-sm mx-auto">
+                      {automation.videoUrl.startsWith("http") ? (
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={automation.videoUrl}
+                          title={`${automation.name} - Demo`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="absolute inset-0 w-full h-full"
+                        ></iframe>
+                      ) : (
+                        <video
+                          controls
+                          className="absolute inset-0 w-full h-full object-contain"
+                          playsInline
+                        >
+                          <source src={automation.videoUrl} type="video/mp4" />
+                          Tu navegador no soporta la reproducción de video.
+                        </video>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </section>

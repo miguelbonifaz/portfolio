@@ -19,13 +19,10 @@ const automationsData: Automation[] = [
     ],
     status: 'live',
     icon: 'scissors',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder video
+    videoUrl: '/assets/videos/bonifaz-peluqueros-agent.mp4',
     images: {
       hero: '/assets/images/projects/bonifaz-peluqueros/bonifaz-peluqueros-hero.png',
-      gallery: [
-        '/assets/images/projects/bonifaz-peluqueros/bonifaz-peluqueros-gallery-1.png',
-        '/assets/images/projects/bonifaz-peluqueros/bonifaz-peluqueros-gallery-2.png'
-      ]
+      gallery: []
     },
     cta: {
       text: 'Probar Demo en WhatsApp',
