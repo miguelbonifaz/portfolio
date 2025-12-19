@@ -126,23 +126,41 @@ export default async function AutomationDetailPage({
               {/* Main Description */}
               <div className="lg:col-span-7 space-y-8">
                 <h2 className="serif-font text-2xl md:text-3xl text-gray-900">
-                  Sobre la Solución
+                  {automation.status === "development"
+                    ? "Proyecto en Desarrollo"
+                    : "Sobre la Solución"}
                 </h2>
                 <div className="prose prose-lg text-gray-600 font-light leading-relaxed">
                   <p>{automation.longDescription}</p>
                 </div>
 
                 {/* Funcionalidades Clave */}
-                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                <div
+                  className={`p-8 rounded-2xl border ${
+                    automation.status === "development"
+                      ? "bg-yellow-50 border-yellow-200"
+                      : "bg-gray-50 border-gray-100"
+                  }`}
+                >
                   <h3 className="flex items-center space-x-2 serif-font text-xl text-gray-900 mb-6">
                     <Bot className="w-5 h-5 text-gray-500" />
-                    <span>Funcionalidades Clave</span>
+                    <span>
+                      {automation.status === "development"
+                        ? "Funcionalidades Planeadas"
+                        : "Funcionalidades Clave"}
+                    </span>
                   </h3>
 
                   <ul className="space-y-4">
                     {automation.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                        <span
+                          className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-0.5 ${
+                            automation.status === "development"
+                              ? "bg-yellow-100 text-yellow-600"
+                              : "bg-blue-100 text-blue-600"
+                          }`}
+                        >
                           <Check className="w-3.5 h-3.5" />
                         </span>
                         <span className="text-gray-600 text-sm leading-relaxed">
@@ -152,10 +170,23 @@ export default async function AutomationDetailPage({
                     ))}
                   </ul>
                 </div>
+
+                {/* Development Notice */}
+                {automation.status === "development" && (
+                  <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+                    <p className="text-sm text-blue-900 leading-relaxed">
+                      <strong className="font-semibold">
+                        Este agente está en fase de desarrollo.
+                      </strong>{" "}
+                      Estoy iterando y probando diferentes enfoques para crear
+                      la mejor experiencia posible.
+                    </p>
+                  </div>
+                )}
               </div>
 
-              {/* Video Demo - Mobile Format */}
-              {automation.videoUrl && (
+              {/* Video Demo - Mobile Format (Live only) */}
+              {automation.status === "live" && automation.videoUrl && (
                 <div className="lg:col-span-5">
                   <div className="sticky top-8">
                     <div className="aspect-[9/16] relative rounded-xl overflow-hidden shadow-xl border border-gray-200 bg-black max-w-sm mx-auto">
@@ -183,6 +214,26 @@ export default async function AutomationDetailPage({
                   </div>
                 </div>
               )}
+
+              {/* Development Placeholder */}
+              {automation.status === "development" && (
+                <div className="lg:col-span-5">
+                  <div className="sticky top-8">
+                    <div className="aspect-[9/16] relative rounded-xl overflow-hidden shadow-lg border-2 border-dashed border-yellow-300 bg-gradient-to-br from-yellow-50 to-yellow-100 max-w-sm mx-auto flex items-center justify-center">
+                      <div className="text-center p-8 space-y-4">
+                        <Bot className="w-16 h-16 text-yellow-600 mx-auto animate-pulse" />
+                        <p className="text-sm font-medium text-yellow-800">
+                          Demo próximamente
+                        </p>
+                        <p className="text-xs text-yellow-600 leading-relaxed">
+                          Estoy construyendo este agente y pronto habrá un video
+                          demo disponible.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -190,19 +241,39 @@ export default async function AutomationDetailPage({
         {/* CTA Footer */}
         <section className="bg-gray-900 py-20 text-center px-6">
           <div className="max-w-2xl mx-auto space-y-6">
-            <h2 className="serif-font text-3xl text-white">
-              ¿Necesitas algo similar?
-            </h2>
-            <p className="text-gray-400 font-light">
-              Podemos implementar un agente como este para tu negocio en menos
-              de 72 horas.
-            </p>
-            <Link
-              href="/#contact"
-              className="inline-block bg-white text-black px-8 py-3 text-xs uppercase tracking-widest font-bold hover:bg-gray-200 transition-colors"
-            >
-              Cotizar Ahora
-            </Link>
+            {automation.status === "live" ? (
+              <>
+                <h2 className="serif-font text-3xl text-white">
+                  ¿Necesitas algo similar?
+                </h2>
+                <p className="text-gray-400 font-light">
+                  Podemos implementar un agente como este para tu negocio en
+                  menos de 72 horas.
+                </p>
+                <Link
+                  href="/#contact"
+                  className="inline-block bg-white text-black px-8 py-3 text-xs uppercase tracking-widest font-bold hover:bg-gray-200 transition-colors"
+                >
+                  Cotizar Ahora
+                </Link>
+              </>
+            ) : (
+              <>
+                <h2 className="serif-font text-3xl text-white">
+                  ¿Tienes feedback o ideas?
+                </h2>
+                <p className="text-gray-400 font-light">
+                  Este proyecto está en construcción. Si tienes sugerencias o te
+                  gustaría colaborar, hablemos.
+                </p>
+                <Link
+                  href="/#contact"
+                  className="inline-block bg-white text-black px-8 py-3 text-xs uppercase tracking-widest font-bold hover:bg-gray-200 transition-colors"
+                >
+                  Enviar Feedback
+                </Link>
+              </>
+            )}
           </div>
         </section>
       </main>

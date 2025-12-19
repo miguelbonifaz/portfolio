@@ -33,12 +33,11 @@ const automationsData: Automation[] = [
     id: '2',
     slug: 'dulce-sabor-assistant',
     name: 'Dulce Sabor',
-    shortDescription: 'Asistente virtual para pastelería que cotiza tortas personalizadas, informa sobre productos y gestiona disponibilidad.',
-    longDescription: 'Asistente inteligente diseñado para pastelerías artesanales. Este bot guía a los clientes a través del proceso de personalización de tortas, ayudándoles a elegir sabores, tamaños y decoraciones. Calcula cotizaciones estimadas al instante y verifica la disponibilidad de fechas para pedidos especiales. Su objetivo es agilizar el proceso de venta y asegurar que cada pedido cuente con toda la información necesaria antes de pasar al equipo de cocina.',
+    shortDescription: 'Asistente virtual para pastelería que cotiza tortas personalizadas e informa sobre productos.',
+    longDescription: 'Asistente inteligente diseñado para pastelerías. Este bot guía a los clientes a través del proceso de personalización de tortas, ayudándoles a elegir sabores, tamaños y decoraciones. Calcula cotizaciones estimadas al instante. Su objetivo es agilizar el proceso de venta y asegurar que cada pedido cuente con toda la información necesaria para facilitar la confirmación del pedido.',
     features: [
       'Cotización de tortas personalizadas',
       'Catálogo interactivo de productos',
-      'Consulta de disponibilidad de fechas',
       'Respuestas a preguntas frecuentes',
       'Toma de pedidos paso a paso'
     ],
