@@ -13,7 +13,7 @@ const profileData: Profile = {
   socials: [
     {
       platform: 'GitHub',
-      url: 'https://github.com/zilverdev',
+      url: 'https://github.com/miguelbonifaz',
       icon: 'github',
     },
     {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, X } from "lucide-react";
+import { Linkedin, X, Github } from "lucide-react";
 import { profile } from "@/data/profile";
 
 export default function Hero() {
@@ -37,7 +37,7 @@ export default function Hero() {
       {/* Links and Info Grid */}
       <div className="w-full max-w-2xl mt-8 px-4 animate-fade-in-up delay-500">
         <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
-          {/* Left: LinkedIn & Badge */}
+          {/* Left: Social Links & Badge */}
           <div className="flex items-center space-x-3">
             <Link
               href="https://www.linkedin.com/in/miguelbonifaz126/"
@@ -45,6 +45,13 @@ export default function Hero() {
               className="text-gray-600 hover:text-black smooth-color hover-scale"
             >
               <Linkedin className="w-5 h-5" />
+            </Link>
+            <Link
+              href="https://github.com/miguelbonifaz"
+              target="_blank"
+              className="text-gray-600 hover:text-black smooth-color hover-scale"
+            >
+              <Github className="w-5 h-5" />
             </Link>
             <Link
               href="https://x.com/MBonifaz126"

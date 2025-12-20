@@ -4,7 +4,7 @@
 
 **Full-Stack Developer especializado en Laravel & Vue.js**
 
-[🌐 Ver Portfolio Completo](https://portfolio.miguelbonifaz.com) | [📧 Email](mailto:miguelbonifaz126@gmail.com) | [💼 LinkedIn](https://linkedin.com/in/zilverdev) | [🐙 GitHub](https://github.com/zilverdev)
+[🌐 Ver Portfolio Completo](https://portfolio.miguelbonifaz.com) | [📧 Email](mailto:miguelbonifaz126@gmail.com) | [💼 LinkedIn](https://linkedin.com/in/zilverdev) | [🐙 GitHub](https://github.com/miguelbonifaz)
 
 </div>
 
@@ -155,7 +155,7 @@ Asistente virtual para pastelería que cotiza tortas personalizadas e informa so
 
 **🌐 Redes Sociales:**
 - [LinkedIn](https://linkedin.com/in/zilverdev)
-- [GitHub](https://github.com/zilverdev)
+- [GitHub](https://github.com/miguelbonifaz)
 - [Twitter](https://twitter.com/zilverdev)
 
 ---
