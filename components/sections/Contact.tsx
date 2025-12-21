@@ -6,7 +6,6 @@ import { useActionState } from 'react'
 import { useFormStatus } from 'react-dom'
 import { submitContactForm, type ContactFormState } from '@/app/actions/contact'
 import { useEffect, useRef, useState } from 'react'
-import toast, { Toaster } from 'react-hot-toast'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { useFormValidation } from '@/hooks/useFormValidation'
 import { contactFormSchema } from '@/data/schemas'
@@ -63,29 +62,12 @@ export default function Contact() {
   useEffect(() => {
     if (state?.success) {
       setShowSuccess(true)
-      toast.success(state.message, {
-        duration: 5000,
-        position: 'bottom-right',
-        style: {
-          background: '#1f2937',
-          color: '#fff',
-        },
-      })
       formRef.current?.reset()
       setFormData({ name: '', email: '', message: '' })
       clearErrors()
 
-      // Hide success animation after 2 seconds
-      setTimeout(() => setShowSuccess(false), 2000)
-    } else if (state?.success === false && !state.errors) {
-      toast.error(state.message, {
-        duration: 5000,
-        position: 'bottom-right',
-        style: {
-          background: '#ef4444',
-          color: '#fff',
-        },
-      })
+      // Hide success message after 5 seconds
+      setTimeout(() => setShowSuccess(false), 5000)
     }
   }, [state, clearErrors])
 
@@ -121,7 +103,6 @@ export default function Contact() {
 
   return (
     <>
-      <Toaster />
       <section id="contact" className="w-full thin-border-top bg-white" ref={ref}>
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
@@ -226,12 +207,22 @@ export default function Contact() {
                       )}
                     </div>
 
-                    <div className="flex items-center gap-3">
-                      <SubmitButton isValid={isFormValid} />
-                      {showSuccess && (
-                        <CheckCircle2 className="w-6 h-6 text-green-600 animate-checkmark" />
-                      )}
-                    </div>
+                    <SubmitButton isValid={isFormValid} />
+
+                    {/* Success Message */}
+                    {showSuccess && state?.success && (
+                      <div className="flex items-center gap-2 text-green-600 text-sm animate-fade-in">
+                        <CheckCircle2 className="w-5 h-5" />
+                        <p>{state.message}</p>
+                      </div>
+                    )}
+
+                    {/* Error Message */}
+                    {state?.success === false && !state.errors && (
+                      <div className="text-red-500 text-sm animate-error-slide">
+                        <p>{state.message}</p>
+                      </div>
+                    )}
                   </form>
                 </div>
 
