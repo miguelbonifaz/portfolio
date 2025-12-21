@@ -1,23 +1,28 @@
 import { useState, useCallback } from 'react'
-import { ZodSchema, ZodError } from 'zod'
+import { z, ZodError } from 'zod'
 
 type FieldErrors<T> = {
   [K in keyof T]?: string[]
 }
 
-export function useFormValidation<T extends Record<string, unknown>>(schema: ZodSchema<T>) {
+export function useFormValidation<T extends Record<string, unknown>>(schema: z.ZodObject<any>) {
   const [errors, setErrors] = useState<FieldErrors<T>>({})
   const [touched, setTouched] = useState<Set<keyof T>>(new Set())
 
   const validateField = useCallback((name: keyof T, value: unknown) => {
     try {
-      // Create a partial object with just this field
-      const data = { [name]: value }
+      // Get the field schema for this specific field
+      const fieldSchema = schema.shape[name as string]
 
-      // Try to parse just this field value
-      schema.parse(data as T)
+      if (!fieldSchema) {
+        console.warn(`No schema found for field: ${String(name)}`)
+        return false
+      }
 
-      // Clear error for this field
+      // Validate just this field's value
+      fieldSchema.parse(value)
+
+      // Clear error for this field if validation passed
       setErrors(prev => {
         const newErrors = { ...prev }
         delete newErrors[name]
@@ -27,8 +32,7 @@ export function useFormValidation<T extends Record<string, unknown>>(schema: Zod
       return true
     } catch (error) {
       if (error instanceof ZodError) {
-        const issues = error.issues
-        const fieldError = issues.find(e => e.path[0] === name)
+        const fieldError = error.issues[0]
         if (fieldError) {
           setErrors(prev => ({
             ...prev,
