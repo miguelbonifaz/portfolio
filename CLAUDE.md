@@ -82,16 +82,18 @@ components/
 ### Server Actions
 
 Contact form uses Next.js Server Actions (`app/actions/contact.ts`):
-- Zod validation on server
+- Zod validation on server (shared schema with client)
+- Client-side validation with `useFormValidation` hook
+- Real-time field validation on blur
+- Visual feedback (green/red borders, character counter)
+- Form animations (shake on error, checkmark on success)
 - Rate limiting (5 messages/hour per email, in-memory)
-- Nodemailer for email (Mailtrap in dev, configurable for production)
-- HTML email templates embedded in action
-- Auto-reply to sender
+- Sends to n8n webhook for processing
 
 **Environment variables required:**
 ```
-MAILTRAP_HOST, MAILTRAP_PORT, MAILTRAP_USER, MAILTRAP_PASS
-MAILTRAP_FROM, CONTACT_EMAIL
+N8N_WEBHOOK_URL=https://n8n.miguelbonifaz.com/webhook/miguel-portfolio
+N8N_WEBHOOK_TOKEN=your-token-here
 ```
 
 ### Image Optimization
@@ -143,8 +145,8 @@ To export as pure static HTML, uncomment `output: 'export'` in `next.config.ts`.
 ### Rate Limiting
 Current implementation is in-memory (resets on server restart). For production, use Redis/database.
 
-### Email Service
-Development uses Mailtrap. For production, replace with Resend, SendGrid, or similar in `app/actions/contact.ts`.
+### Webhook Integration
+Contact form sends to n8n webhook. Configure URL and token in `.env.local`.
 
 ## Common Issues
 
@@ -152,6 +154,6 @@ Development uses Mailtrap. For production, replace with Resend, SendGrid, or sim
 
 **Images not loading:** Verify paths start from `/assets` (relative to `/public` root).
 
-**Contact form not sending:** Check `.env.local` has all Mailtrap variables.
+**Contact form not sending:** Check `.env.local` has `N8N_WEBHOOK_URL` and `N8N_WEBHOOK_TOKEN` configured.
 
 **Domain change:** Update both `app/layout.tsx` (`metadataBase`) and `lib/json-ld.ts` (hardcoded URLs).

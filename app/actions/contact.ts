@@ -1,7 +1,6 @@
 'use server'
 
 import { z } from 'zod'
-import nodemailer from 'nodemailer'
 import { contactFormSchema } from '@/data/schemas'
 
 export type ContactFormData = z.infer<typeof contactFormSchema>
@@ -73,218 +72,26 @@ export async function submitContactForm(
       }
     }
 
-    // Send email using Nodemailer
-    const transporter = nodemailer.createTransport({
-      host: process.env.MAILTRAP_HOST || 'sandbox.smtp.mailtrap.io',
-      port: parseInt(process.env.MAILTRAP_PORT || '2525'),
-      auth: {
-        user: process.env.MAILTRAP_USER,
-        pass: process.env.MAILTRAP_PASS,
+    // Send to n8n webhook
+    const webhookUrl = process.env.N8N_WEBHOOK_URL || 'https://n8n.miguelbonifaz.com/webhook/miguel-portfolio'
+    const webhookToken = process.env.N8N_WEBHOOK_TOKEN || '+XlyqN3iv7YZ4NeOPaI7bs8z7bV/Hr3H967UQDMTBGg='
+
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Portfolio': webhookToken,
       },
+      body: JSON.stringify({
+        name: validatedData.name,
+        email: validatedData.email,
+        message: validatedData.message,
+      }),
     })
 
-    // Email to yourself
-    await transporter.sendMail({
-      from: process.env.MAILTRAP_FROM || 'portfolio@miguelbonifaz.com',
-      to: process.env.CONTACT_EMAIL || 'miguelbonifaz126@gmail.com',
-      subject: `Nuevo mensaje de contacto de ${validatedData.name}`,
-      html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <meta charset="utf-8">
-            <style>
-              body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-              }
-              .header {
-                background: #1f2937;
-                color: white;
-                padding: 20px;
-                text-align: center;
-                border-radius: 8px 8px 0 0;
-              }
-              .content {
-                background: #f9fafb;
-                padding: 30px;
-                border: 1px solid #e5e7eb;
-                border-top: none;
-                border-radius: 0 0 8px 8px;
-              }
-              .field {
-                margin-bottom: 20px;
-              }
-              .label {
-                font-size: 12px;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                color: #6b7280;
-                margin-bottom: 5px;
-              }
-              .value {
-                font-size: 16px;
-                color: #1f2937;
-              }
-              .message-box {
-                background: white;
-                padding: 20px;
-                border-left: 4px solid #1f2937;
-                margin-top: 10px;
-                border-radius: 4px;
-              }
-              .footer {
-                text-align: center;
-                margin-top: 20px;
-                font-size: 12px;
-                color: #6b7280;
-              }
-            </style>
-          </head>
-          <body>
-            <div class="header">
-              <h1 style="margin: 0; font-size: 24px;">Nuevo Mensaje de Contacto</h1>
-            </div>
-            <div class="content">
-              <div class="field">
-                <div class="label">Nombre</div>
-                <div class="value">${validatedData.name}</div>
-              </div>
-              <div class="field">
-                <div class="label">Email</div>
-                <div class="value">
-                  <a href="mailto:${validatedData.email}" style="color: #1f2937; text-decoration: none;">
-                    ${validatedData.email}
-                  </a>
-                </div>
-              </div>
-              <div class="field">
-                <div class="label">Mensaje</div>
-                <div class="message-box">
-                  ${validatedData.message.replace(/\n/g, '<br>')}
-                </div>
-              </div>
-            </div>
-            <div class="footer">
-              <p>Este mensaje fue enviado desde tu portfolio en miguelbonifaz.com</p>
-            </div>
-          </body>
-        </html>
-      `,
-      text: `
-Nuevo mensaje de contacto
-
-Nombre: ${validatedData.name}
-Email: ${validatedData.email}
-
-Mensaje:
-${validatedData.message}
-
----
-Este mensaje fue enviado desde tu portfolio en miguelbonifaz.com
-      `,
-    })
-
-    // Auto-reply to sender
-    await transporter.sendMail({
-      from: process.env.MAILTRAP_FROM || 'portfolio@miguelbonifaz.com',
-      to: validatedData.email,
-      subject: 'Gracias por tu mensaje - Miguel Bonifaz',
-      html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <meta charset="utf-8">
-            <style>
-              body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-              }
-              .header {
-                background: #1f2937;
-                color: white;
-                padding: 30px;
-                text-align: center;
-                border-radius: 8px 8px 0 0;
-              }
-              .content {
-                background: #f9fafb;
-                padding: 30px;
-                border: 1px solid #e5e7eb;
-                border-top: none;
-                border-radius: 0 0 8px 8px;
-              }
-              .button {
-                display: inline-block;
-                background: #1f2937;
-                color: white;
-                padding: 12px 24px;
-                text-decoration: none;
-                border-radius: 4px;
-                margin-top: 20px;
-              }
-              .footer {
-                text-align: center;
-                margin-top: 20px;
-                font-size: 12px;
-                color: #6b7280;
-              }
-            </style>
-          </head>
-          <body>
-            <div class="header">
-              <h1 style="margin: 0; font-size: 28px;">¡Gracias por contactarme!</h1>
-            </div>
-            <div class="content">
-              <p>Hola ${validatedData.name},</p>
-              <p>He recibido tu mensaje y te responderé lo antes posible, generalmente en las próximas 24-48 horas.</p>
-              <p>Mientras tanto, puedes:</p>
-              <ul>
-                <li>Ver mis proyectos en <a href="https://miguelbonifaz.com/#works" style="color: #1f2937;">mi portfolio</a></li>
-                <li>Conectar conmigo en <a href="https://www.linkedin.com/in/miguelbonifaz126/" style="color: #1f2937;">LinkedIn</a></li>
-                <li>Seguirme en <a href="https://x.com/MBonifaz126" style="color: #1f2937;">X (Twitter)</a></li>
-              </ul>
-              <p>¡Hablamos pronto!</p>
-              <p style="margin-top: 30px;">
-                <strong>Miguel Bonifaz</strong><br>
-                Full-Stack Developer<br>
-                <a href="mailto:miguelbonifaz126@gmail.com" style="color: #1f2937;">miguelbonifaz126@gmail.com</a>
-              </p>
-            </div>
-            <div class="footer">
-              <p>© 2025 Miguel Bonifaz. Todos los derechos reservados.</p>
-            </div>
-          </body>
-        </html>
-      `,
-      text: `
-Hola ${validatedData.name},
-
-He recibido tu mensaje y te responderé lo antes posible, generalmente en las próximas 24-48 horas.
-
-Mientras tanto, puedes:
-- Ver mis proyectos en https://miguelbonifaz.com/#works
-- Conectar conmigo en https://www.linkedin.com/in/miguelbonifaz126/
-- Seguirme en https://x.com/MBonifaz126
-
-¡Hablamos pronto!
-
-Miguel Bonifaz
-Full-Stack Developer
-miguelbonifaz126@gmail.com
-
----
-© 2025 Miguel Bonifaz. Todos los derechos reservados.
-      `,
-    })
+    if (!response.ok) {
+      throw new Error(`Webhook failed: ${response.status} ${response.statusText}`)
+    }
 
     return {
       success: true,
