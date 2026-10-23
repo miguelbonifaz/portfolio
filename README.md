@@ -79,6 +79,16 @@ Sistema administrativo completo para programas de intercambio estudiantil intern
 
 ---
 
+### 🔷 [Expertise](https://english-app.laravel.cloud)
+
+Plataforma de aprendizaje de inglés con plan semanal por niveles, test de ubicación y ejercicios calificados con IA.
+
+**Tech Stack:** Laravel · Inertia.js · React · TailwindCSS · OpenAI
+
+**Features:** Test de ubicación, plan semanal de seis habilidades, calificación y feedback con IA, seguimiento de progreso y rachas, gestión de matrículas y syllabus.
+
+---
+
 ### 🔷 [Sonata](https://samborondon.sonata.com.ec)
 
 Mi primer proyecto freelance: plataforma de reservaciones para escuela de música.

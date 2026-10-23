@@ -56,6 +56,36 @@ Desarrollé un sistema completo utilizando Laravel y Filament que permite gestio
     },
   },
   {
+    id: "5",
+    slug: "english-app",
+    title: "Expertise",
+    shortDescription:
+      "Plataforma de aprendizaje de inglés con plan semanal por niveles, test de ubicación y ejercicios calificados con IA.",
+    longDescription: `Expertise by Exchange es una plataforma de aprendizaje de inglés. Necesitaban acompañar a cada estudiante con un plan de estudio estructurado y retroalimentación inmediata, sin depender de que un docente revise cada ejercicio.
+
+Desarrollé una aplicación completa donde el estudiante rinde un test de ubicación, recibe su nivel de inglés y sigue un plan semanal de ejercicios de gramática, vocabulario, lectura, escritura, listening y speaking. Cada respuesta se califica con OpenAI y el estudiante recibe un puntaje y feedback personalizado al instante.
+
+El proyecto se construyó con React e Inertia.js sobre Laravel. Los administradores gestionan estudiantes, docentes, matrículas y syllabus, configuran las habilidades activas por semana y siguen el progreso de cada estudiante con su línea de tiempo, racha y avance del curso.
+
+El resultado es una experiencia de aprendizaje constante y medible: los estudiantes practican todos los días a su ritmo y el equipo académico tiene visibilidad completa del avance de cada uno.`,
+    category: "Web Application",
+    technologies: ["Laravel", "Inertia.js", "React", "TailwindCSS", "OpenAI"],
+    featured: true,
+    images: {
+      thumbnail: "/assets/images/projects/english-app/english-app-hero.png",
+      hero: "/assets/images/projects/english-app/english-app-hero.png",
+      gallery: [
+        "/assets/images/projects/english-app/english-app-gallery-1.png",
+        "/assets/images/projects/english-app/english-app-gallery-2.png",
+        "/assets/images/projects/english-app/english-app-gallery-3.png",
+        "/assets/images/projects/english-app/english-app-gallery-4.png",
+      ],
+    },
+    links: {
+      live: "https://english-app.laravel.cloud",
+    },
+  },
+  {
     id: "4",
     slug: "sonata",
     title: "Sonata",
