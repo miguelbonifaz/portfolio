@@ -58,7 +58,7 @@ Desarrollé un sistema completo utilizando Laravel y Filament que permite gestio
   {
     id: "5",
     slug: "english-app",
-    title: "Expertise",
+    title: "Expertise English",
     shortDescription:
       "Plataforma de aprendizaje de inglés con plan semanal por niveles, test de ubicación y ejercicios calificados con IA.",
     longDescription: `Expertise by Exchange es una plataforma de aprendizaje de inglés. Necesitaban acompañar a cada estudiante con un plan de estudio estructurado y retroalimentación inmediata, sin depender de que un docente revise cada ejercicio.
@@ -83,6 +83,33 @@ El resultado es una experiencia de aprendizaje constante y medible: los estudian
     },
     links: {
       live: "https://english-app.laravel.cloud",
+    },
+  },
+  {
+    id: "6",
+    slug: "expertise-admin",
+    title: "Expertise Admin",
+    shortDescription:
+      "Sistema administrativo para academia de inglés: calendario de clases, asistencia, renovaciones y reportes mensuales.",
+    longDescription: `Expertise es una academia de inglés con clases individuales y grupales, presenciales y en línea. Necesitaban una sola herramienta para que administradores y profesores coordinaran horarios, asistencias y reportes.
+
+Desarrollé un sistema completo donde el equipo administrativo agenda clases en un calendario semanal y diario por profesor y modalidad, registra la asistencia de cada estudiante y programa clases de recuperación. Un módulo de renovaciones detecta a los estudiantes cuya última clase está próxima y permite renovar su horario respetando los grupos de cada profesor.
+
+El proyecto se construyó con Vue.js e Inertia.js sobre Laravel. Los profesores tienen su propio panel con sus próximas clases y redactan reportes mensuales de cada estudiante; los administradores los revisan con anotaciones sobre el texto, solicitan correcciones o los aprueban, y el reporte se genera en PDF y se envía a administración por email.
+
+El resultado es una operación académica ordenada: horarios sin choques, asistencia al día y reportes revisados a tiempo para cada estudiante.`,
+    category: "Web Application",
+    technologies: ["Laravel", "Vue.js", "Inertia.js", "TailwindCSS", "MySQL"],
+    featured: true,
+    images: {
+      thumbnail: "/assets/images/projects/expertise-admin/expertise-admin-hero.png",
+      hero: "/assets/images/projects/expertise-admin/expertise-admin-hero.png",
+      gallery: [
+        "/assets/images/projects/expertise-admin/expertise-admin-gallery-1.png",
+        "/assets/images/projects/expertise-admin/expertise-admin-gallery-2.png",
+        "/assets/images/projects/expertise-admin/expertise-admin-gallery-3.png",
+        "/assets/images/projects/expertise-admin/expertise-admin-gallery-4.png",
+      ],
     },
   },
   {
