@@ -79,26 +79,6 @@ Sistema administrativo completo para programas de intercambio estudiantil intern
 
 ---
 
-### 🔷 [Segob Noticias](https://noticias.segob.gob.mx)
-
-Sistema de gestión de contenido para portal de noticias oficial del gobierno.
-
-**Tech Stack:** Laravel · Filament · Vue.js · Inertia.js · MySQL
-
-**Features:** CMS robusto, categorización, gestión multimedia (PDF, galerías, videos, audios), SEO optimizado.
-
----
-
-### 🔷 [Beaubella](https://app.beaubella.com.mx)
-
-Sistema de reservaciones para salón de belleza con administración de inventario y generación de reportes.
-
-**Tech Stack:** Laravel · Filament · TailwindCSS · Alpine.js
-
-**Features:** Gestión de citas, control de inventario, registro de pagos, reportes en Excel/PDF, multi-sucursal.
-
----
-
 ### 🔷 [Sonata](https://samborondon.sonata.com.ec)
 
 Mi primer proyecto freelance: plataforma de reservaciones para escuela de música.
