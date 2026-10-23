@@ -79,13 +79,23 @@ Sistema administrativo completo para programas de intercambio estudiantil intern
 
 ---
 
-### 🔷 [Expertise](https://english-app.laravel.cloud)
+### 🔷 [Expertise English](https://english-app.laravel.cloud)
 
 Plataforma de aprendizaje de inglés con plan semanal por niveles, test de ubicación y ejercicios calificados con IA.
 
 **Tech Stack:** Laravel · Inertia.js · React · TailwindCSS · OpenAI
 
 **Features:** Test de ubicación, plan semanal de seis habilidades, calificación y feedback con IA, seguimiento de progreso y rachas, gestión de matrículas y syllabus.
+
+---
+
+### 🔷 Expertise Admin
+
+Sistema administrativo para academia de inglés: calendario de clases, asistencia, renovaciones y reportes mensuales.
+
+**Tech Stack:** Laravel · Vue.js · Inertia.js · TailwindCSS · MySQL
+
+**Features:** Calendario semanal y diario por profesor, registro de asistencia y recuperaciones, renovaciones de clases, reportes mensuales con anotaciones, aprobación y PDF.
 
 ---
 
