@@ -56,30 +56,6 @@ Desarrollé un sistema completo utilizando Laravel y Filament que permite gestio
     },
   },
   {
-    id: "3",
-    slug: "segob",
-    title: "Segob Noticias",
-    shortDescription:
-      "Sistema de gestión de contenido para portal de noticias oficial del gobierno.",
-    longDescription: `La Secretaría de Gobernación de México necesitaba un portal de noticias moderno y escalable para publicar comunicados oficiales, noticias y actualizaciones gubernamentales. El proyecto requería un CMS potente pero intuitivo que permitiera a múltiples editores gestionar contenido de forma simultánea.
-
-Desarrollé la plataforma utilizando Laravel, Filament, Vue.js e Inertia.js, creando un sistema de gestión de contenido que incluye categorización, gestión de medios (documentos PDF, galerías fotográficas, videos y audios), y SEO.`,
-    category: "Web Application",
-    technologies: ["Laravel", "Filament", "Vue.js", "Inertia.js", "MySQL"],
-    featured: true,
-    images: {
-      thumbnail: "/assets/images/projects/segob/segob-hero.png",
-      hero: "/assets/images/projects/segob/segob-hero.png",
-      gallery: [
-        "/assets/images/projects/segob/segob-gallery-1.png",
-        "/assets/images/projects/segob/segob-gallery-2.png",
-      ],
-    },
-    links: {
-      live: "https://noticias.segob.gob.mx",
-    },
-  },
-  {
     id: "4",
     slug: "sonata",
     title: "Sonata",
@@ -102,33 +78,6 @@ Este proyecto marcó el inicio de mi carrera freelance y confirmó mi decisión 
     },
     links: {
       live: "https://samborondon.laravel.cloud",
-    },
-  },
-  {
-    id: "5",
-    slug: "beaubella",
-    title: "Beaubella",
-    shortDescription:
-      "Sistema de reservaciones para salón de belleza con administración de inventario y generación de reportes.",
-    longDescription: `Beaubella es un spa de alta gama que necesitaba modernizar completamente su gestión operativa. El desafío era crear un sistema integral que manejara reservaciones, inventario de productos, registro de pagos y reportes administrativos, todo desde una plataforma centralizada.
-
-Desarrollé una plataforma completa utilizando Laravel, Livewire y Filament que gestiona el ciclo completo del negocio desde el panel administrativo: registro de citas con asignación de profesionales y servicios, control de inventario cuando se utilizan productos durante los tratamientos, y registro de pagos realizados. El sistema incluye gestión de múltiples sucursales y un sistema de roles que permite a administradores, personal de mostrador y profesionales acceder según sus responsabilidades.
-
-La plataforma genera reportes detallados en Excel y PDF para análisis de ventas, uso de productos, y rendimiento por profesional o sucursal, permitiendo a los dueños tomar decisiones informadas sobre su negocio.`,
-    category: "Web Application",
-    technologies: ["Laravel", "Filament", "TailwindCSS", "Alpine.js"],
-    featured: true,
-    images: {
-      thumbnail: "/assets/images/projects/beaubella/beaubella-hero.png",
-      hero: "/assets/images/projects/beaubella/beaubella-hero.png",
-      gallery: [
-        "/assets/images/projects/beaubella/beaubella-gallery-1.png",
-        "/assets/images/projects/beaubella/beaubella-gallery-2.png",
-        "/assets/images/projects/beaubella/beaubella-gallery-3.png",
-      ],
-    },
-    links: {
-      live: "https://app.beaubella.com.mx",
     },
   },
 ];
