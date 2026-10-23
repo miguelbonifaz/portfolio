@@ -111,6 +111,9 @@ El resultado es una operación académica ordenada: horarios sin choques, asiste
         "/assets/images/projects/expertise-admin/expertise-admin-gallery-4.png",
       ],
     },
+    links: {
+      live: "https://expertiseadm.exchangeec.app",
+    },
   },
   {
     id: "4",
