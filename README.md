@@ -89,7 +89,7 @@ Plataforma de aprendizaje de inglés con plan semanal por niveles, test de ubica
 
 ---
 
-### 🔷 [Sonata](https://samborondon.sonata.com.ec)
+### 🔷 [Sonata](https://samborondon.laravel.cloud)
 
 Mi primer proyecto freelance: plataforma de reservaciones para escuela de música.
 
