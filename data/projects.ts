@@ -101,7 +101,7 @@ Este proyecto marcó el inicio de mi carrera freelance y confirmó mi decisión 
       gallery: [],
     },
     links: {
-      live: "https://samborondon.sonata.com.ec",
+      live: "https://samborondon.laravel.cloud",
     },
   },
   {
