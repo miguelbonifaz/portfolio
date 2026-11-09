@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Bot, MessageSquare, Database, Zap } from 'lucide-react'
+import { Bot, MessageSquare, Database, Zap, Sparkles } from 'lucide-react'
 import Header from '@/components/ui/Header'
 import Footer from '@/components/ui/Footer'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
@@ -79,6 +79,10 @@ export default function AutomationsPage() {
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h3 className={`font-bold mb-12 text-xs uppercase tracking-wide text-gray-400 transition-all duration-600 ${techSection.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>Stack Tecnológico</h3>
             <div className={`flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-600 ${techSection.isVisible ? 'animate-fade-in-up delay-100' : 'opacity-0 translate-y-5'}`}>
+              <div className="flex flex-col items-center gap-2">
+                <Sparkles className="w-8 h-8" />
+                <span className="text-xs font-bold">Laravel AI SDK</span>
+              </div>
               <div className="flex flex-col items-center gap-2">
                 <Bot className="w-8 h-8" />
                 <span className="text-xs font-bold">OpenAI API</span>
