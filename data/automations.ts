@@ -7,19 +7,25 @@ const automationsData: Automation[] = [
     id: '1',
     slug: 'bonifaz-peluqueros-bot',
     name: 'Bonifaz Peluqueros',
-    shortDescription: 'Bot de agendamiento de citas que gestiona sincronización de calendario, reprogramación y consultas del menú de servicios.',
-    longDescription: 'Este agente de inteligencia artificial revoluciona la gestión de citas para Bonifaz Peluqueros. Integrado directamente en WhatsApp, permite a los clientes reservar, reprogramar y cancelar citas las 24 horas del día, los 7 días de la semana, sin intervención humana. El sistema se sincroniza en tiempo real con el calendario del negocio, evitando conflictos de horarios y enviando recordatorios automáticos para reducir significativamente la tasa de ausentismo. Además, responde consultas sobre precios, ubicación y servicios ofrecidos, liberando al personal para enfocarse en la atención al cliente presencial.',
+    shortDescription: 'Agente de IA en WhatsApp que reserva, reprograma y cancela citas 24/7, con disponibilidad real por profesional y soporte para notas de voz.',
+    longDescription: [
+      'Agente de inteligencia artificial integrado en WhatsApp que atiende a los clientes de Bonifaz Peluqueros las 24 horas. Consulta los servicios, revisa la disponibilidad real de cada profesional y reserva, reprograma o cancela citas directamente en el sistema del negocio, sin intervención humana.',
+      'El cliente puede escribir o enviar notas de voz: los audios se transcriben automáticamente y el agente responde igual que a un mensaje de texto. Recuerda el contexto de cada conversación y, antes de crear o modificar una cita, siempre muestra un resumen y espera la confirmación del cliente.',
+      'Todos los mensajes se procesan en segundo plano, en orden y con reintentos automáticos ante fallos, así que ninguna conversación se pierde aunque lleguen muchas a la vez.',
+      'El equipo ve todas las conversaciones en tiempo real desde el panel y puede pausar el bot en cualquier chat para atender personalmente.',
+    ].join('\n\n'),
     features: [
-      'Agendamiento automatizado 24/7',
-      'Sincronización de calendario en tiempo real',
-      'Recordatorios de citas automáticos',
-      'Reprogramación y cancelación autónoma',
-      'Consultas de menú de servicios y precios',
-      'Manejo de lenguaje natural'
+      'Reservas, cambios y cancelaciones 24/7 por WhatsApp',
+      'Entiende texto y notas de voz',
+      'Disponibilidad real por profesional, con alternativas si el día está lleno',
+      'Confirmación con resumen antes de cada acción',
+      'Bandeja de chats en vivo con opción de pausar el bot',
+      'Recordatorios automáticos a clientes y agenda diaria para cada profesional'
     ],
     status: 'live',
     icon: 'scissors',
     videoUrl: '/assets/videos/bonifaz-peluqueros-agent.mp4',
+    techStack: ['Laravel', 'Laravel AI SDK', 'OpenAI', 'WhatsApp Cloud API', 'Horizon', 'Reverb', 'Vue 3'],
     images: {
       hero: '/assets/images/projects/bonifaz-peluqueros/bonifaz-peluqueros-hero.png',
       gallery: []

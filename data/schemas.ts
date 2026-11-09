@@ -63,6 +63,7 @@ export const automationSchema = z.object({
   status: z.enum(['live', 'development', 'planned']),
   icon: z.string(),
   videoUrl: z.string().optional(),
+  techStack: z.array(z.string()).optional(),
   images: z.object({
     hero: z.string(),
     gallery: z.array(z.string()),

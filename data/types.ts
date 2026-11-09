@@ -61,6 +61,7 @@ export interface Automation {
   status: 'live' | 'development' | 'planned'
   icon: string
   videoUrl?: string
+  techStack?: string[]
   images: {
     hero: string
     gallery: string[]
