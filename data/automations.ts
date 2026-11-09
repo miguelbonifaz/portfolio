@@ -39,16 +39,25 @@ const automationsData: Automation[] = [
     id: '2',
     slug: 'dulce-sabor-assistant',
     name: 'Dulce Sabor',
-    shortDescription: 'Asistente virtual para pastelería que cotiza tortas personalizadas e informa sobre productos.',
-    longDescription: 'Asistente inteligente diseñado para pastelerías. Este bot guía a los clientes a través del proceso de personalización de tortas, ayudándoles a elegir sabores, tamaños y decoraciones. Calcula cotizaciones estimadas al instante. Su objetivo es agilizar el proceso de venta y asegurar que cada pedido cuente con toda la información necesaria para facilitar la confirmación del pedido.',
+    shortDescription: 'Agente de IA en WhatsApp que cotiza tortas personalizadas, entiende imágenes y notas de voz, y prellena los pedidos para el equipo.',
+    longDescription: [
+      'Agente de inteligencia artificial integrado en WhatsApp que atiende a los clientes de la pastelería Dulce Sabor y toma sus cotizaciones de tortas personalizadas de principio a fin. Guía al cliente para elegir el diseño, las porciones y la fecha de entrega, muestra un resumen y crea el pedido solo cuando el cliente lo confirma.',
+      'El agente entiende texto, notas de voz, imágenes y documentos: analiza la foto de referencia del cliente y, si no tiene una, le envía un buscador de imágenes para elegir el diseño. Responde preguntas sobre productos, promociones y el negocio con búsqueda semántica sobre la base de conocimiento de la pastelería.',
+      'Del lado del equipo, la IA lee la conversación y prellena la cotización con sabor, porciones, temática, productos adicionales e imágenes elegidas, señalando los datos ambiguos en lugar de inventarlos. Cada nuevo pedido genera un aviso inmediato por WhatsApp y Telegram.',
+      'Todas las conversaciones se ven en tiempo real desde el panel, donde el equipo puede pausar el bot y atender personalmente; al reactivarse, el agente retoma sabiendo lo que pasó en el chat.',
+    ].join('\n\n'),
     features: [
-      'Cotización de tortas personalizadas',
-      'Catálogo interactivo de productos',
-      'Respuestas a preguntas frecuentes',
-      'Toma de pedidos paso a paso'
+      'Cotizaciones de tortas personalizadas 24/7 por WhatsApp',
+      'Entiende texto, notas de voz, imágenes y documentos',
+      'Buscador de diseños cuando el cliente no tiene referencia',
+      'Respuestas sobre productos y promociones con búsqueda semántica',
+      'Prellenado de cotizaciones con IA a partir del chat',
+      'Avisos de nuevos pedidos al equipo por WhatsApp y Telegram',
+      'Bandeja de chats en vivo con opción de pausar el bot'
     ],
-    status: 'development',
+    status: 'live',
     icon: 'cake',
+    techStack: ['Laravel', 'Laravel AI SDK', 'OpenAI', 'WhatsApp Cloud API', 'Reverb', 'React + Inertia', 'SerpAPI'],
     images: {
       hero: '/assets/images/projects/bonifaz-peluqueros/bonifaz-peluqueros-hero.png', // Fallback for now
       gallery: []

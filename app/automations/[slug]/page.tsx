@@ -7,6 +7,7 @@ import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 import AutomationTechStack from "@/components/sections/AutomationTechStack";
+import AutomationVideoPlaceholder from "@/components/sections/AutomationVideoPlaceholder";
 import { generateBreadcrumbSchema } from "@/lib/json-ld";
 
 export const dynamic = "force-static";
@@ -220,6 +221,10 @@ export default async function AutomationDetailPage({
                     </div>
                   </div>
                 </div>
+              )}
+
+              {automation.status === "live" && !automation.videoUrl && (
+                <AutomationVideoPlaceholder />
               )}
 
               {/* Development Placeholder */}
