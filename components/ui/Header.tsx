@@ -75,7 +75,7 @@ export default function Header() {
           </nav>
 
           {/* Clock - Desktop only */}
-          <div className="hidden md:block text-right text-gray-500 w-[140px] animate-fade-in delay-200">
+          <div className="hidden md:block shrink-0 whitespace-nowrap text-right text-gray-500 min-w-[140px] animate-fade-in delay-200">
             {currentTime || "Loading..."}
           </div>
 
