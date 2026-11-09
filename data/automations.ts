@@ -57,6 +57,7 @@ const automationsData: Automation[] = [
     ],
     status: 'live',
     icon: 'cake',
+    videoUrl: '/assets/videos/dulce-sabor-agent.mp4',
     techStack: ['Laravel', 'Laravel AI SDK', 'OpenAI', 'WhatsApp Cloud API', 'Reverb', 'React + Inertia', 'SerpAPI'],
     images: {
       hero: '/assets/images/projects/bonifaz-peluqueros/bonifaz-peluqueros-hero.png', // Fallback for now
