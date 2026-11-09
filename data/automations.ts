@@ -9,10 +9,8 @@ const automationsData: Automation[] = [
     name: 'Bonifaz Peluqueros',
     shortDescription: 'Agente de IA en WhatsApp que reserva, reprograma y cancela citas 24/7, con disponibilidad real por profesional y soporte para notas de voz.',
     longDescription: [
-      'Agente de inteligencia artificial integrado en WhatsApp que atiende a los clientes de Bonifaz Peluqueros las 24 horas. Consulta los servicios, revisa la disponibilidad real de cada profesional y reserva, reprograma o cancela citas directamente en el sistema del negocio, sin intervención humana.',
-      'El cliente puede escribir o enviar notas de voz: los audios se transcriben automáticamente y el agente responde igual que a un mensaje de texto. Recuerda el contexto de cada conversación y, antes de crear o modificar una cita, siempre muestra un resumen y espera la confirmación del cliente.',
-      'Todos los mensajes se procesan en segundo plano, en orden y con reintentos automáticos ante fallos, así que ninguna conversación se pierde aunque lleguen muchas a la vez.',
-      'El equipo ve todas las conversaciones en tiempo real desde el panel y puede pausar el bot en cualquier chat para atender personalmente.',
+      'Agente de IA en WhatsApp que reserva, reprograma y cancela citas las 24 horas, según la disponibilidad real de cada profesional. Entiende texto y notas de voz, y confirma cada acción con un resumen.',
+      'El equipo ve las conversaciones en tiempo real y puede pausar el bot para atender personalmente.',
     ].join('\n\n'),
     features: [
       'Reservas, cambios y cancelaciones 24/7 por WhatsApp',
@@ -41,10 +39,8 @@ const automationsData: Automation[] = [
     name: 'Dulce Sabor',
     shortDescription: 'Agente de IA en WhatsApp que cotiza tortas personalizadas, entiende imágenes y notas de voz, y prellena los pedidos para el equipo.',
     longDescription: [
-      'Agente de inteligencia artificial integrado en WhatsApp que atiende a los clientes de la pastelería Dulce Sabor y toma sus cotizaciones de tortas personalizadas de principio a fin. Guía al cliente para elegir el diseño, las porciones y la fecha de entrega, muestra un resumen y crea el pedido solo cuando el cliente lo confirma.',
-      'El agente entiende texto, notas de voz, imágenes y documentos: analiza la foto de referencia del cliente y, si no tiene una, le envía un buscador de imágenes para elegir el diseño. Responde preguntas sobre productos, promociones y el negocio con búsqueda semántica sobre la base de conocimiento de la pastelería.',
-      'Del lado del equipo, la IA lee la conversación y prellena la cotización con sabor, porciones, temática, productos adicionales e imágenes elegidas, señalando los datos ambiguos en lugar de inventarlos. Cada nuevo pedido genera un aviso inmediato por WhatsApp y Telegram.',
-      'Todas las conversaciones se ven en tiempo real desde el panel, donde el equipo puede pausar el bot y atender personalmente; al reactivarse, el agente retoma sabiendo lo que pasó en el chat.',
+      'Agente de IA en WhatsApp que toma cotizaciones de tortas personalizadas de principio a fin. Entiende texto, notas de voz e imágenes, ayuda al cliente a elegir su diseño y crea el pedido solo tras su confirmación.',
+      'Del lado del equipo, la IA prellena cada cotización a partir del chat y avisa de nuevos pedidos por WhatsApp y Telegram. El bot puede pausarse en cualquier conversación para atender personalmente.',
     ].join('\n\n'),
     features: [
       'Cotizaciones de tortas personalizadas 24/7 por WhatsApp',
