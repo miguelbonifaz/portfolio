@@ -6,6 +6,7 @@ import { getAutomations, getAutomationBySlug } from "@/data";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import JsonLd from "@/components/seo/JsonLd";
+import AutomationTechStack from "@/components/sections/AutomationTechStack";
 import { generateBreadcrumbSchema } from "@/lib/json-ld";
 
 export const dynamic = "force-static";
@@ -130,9 +131,15 @@ export default async function AutomationDetailPage({
                     ? "Proyecto en Desarrollo"
                     : "Sobre la Solución"}
                 </h2>
-                <div className="prose prose-lg text-gray-600 font-light leading-relaxed">
-                  <p>{automation.longDescription}</p>
+                <div className="prose prose-lg text-gray-600 font-light leading-relaxed space-y-4">
+                  {automation.longDescription.split("\n\n").map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                 </div>
+
+                {automation.techStack && (
+                  <AutomationTechStack technologies={automation.techStack} />
+                )}
 
                 {/* Funcionalidades Clave */}
                 <div
