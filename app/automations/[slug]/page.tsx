@@ -8,6 +8,7 @@ import Footer from "@/components/ui/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 import AutomationTechStack from "@/components/sections/AutomationTechStack";
 import AutomationVideoPlaceholder from "@/components/sections/AutomationVideoPlaceholder";
+import AutomationScreenshots from "@/components/sections/AutomationScreenshots";
 import { generateBreadcrumbSchema } from "@/lib/json-ld";
 
 export const dynamic = "force-static";
@@ -249,6 +250,10 @@ export default async function AutomationDetailPage({
             </div>
           </div>
         </section>
+
+        {automation.screenshots && automation.screenshots.length > 0 && (
+          <AutomationScreenshots screenshots={automation.screenshots} />
+        )}
 
         {/* CTA Footer */}
         <section className="bg-gray-900 py-20 text-center px-6">
