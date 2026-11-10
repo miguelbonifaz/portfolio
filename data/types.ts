@@ -61,6 +61,12 @@ export interface AutomationScreenshot {
   label?: string
 }
 
+export interface AutomationScreenshotSection {
+  title: string
+  description?: string
+  screenshots: AutomationScreenshot[]
+}
+
 export interface Automation {
   id: string
   slug: string
@@ -73,6 +79,7 @@ export interface Automation {
   videoUrl?: string
   techStack?: string[]
   screenshots?: AutomationScreenshot[]
+  screenshotSections?: AutomationScreenshotSection[]
   images: {
     hero: string
     gallery: string[]
