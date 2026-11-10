@@ -64,6 +64,14 @@ export const automationSchema = z.object({
   icon: z.string(),
   videoUrl: z.string().optional(),
   techStack: z.array(z.string()).optional(),
+  screenshots: z.array(z.object({
+    src: z.string(),
+    title: z.string(),
+    description: z.string(),
+    width: z.number(),
+    height: z.number(),
+    span: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
+  })).optional(),
   images: z.object({
     hero: z.string(),
     gallery: z.array(z.string()),

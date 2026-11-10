@@ -51,6 +51,15 @@ export interface Project {
   }
 }
 
+export interface AutomationScreenshot {
+  src: string
+  title: string
+  description: string
+  width: number
+  height: number
+  span?: 1 | 2 | 3
+}
+
 export interface Automation {
   id: string
   slug: string
@@ -62,6 +71,7 @@ export interface Automation {
   icon: string
   videoUrl?: string
   techStack?: string[]
+  screenshots?: AutomationScreenshot[]
   images: {
     hero: string
     gallery: string[]
