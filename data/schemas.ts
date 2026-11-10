@@ -53,6 +53,16 @@ export const projectSchema = z.object({
   }).optional(),
 })
 
+const screenshotSchema = z.object({
+  src: z.string(),
+  title: z.string(),
+  description: z.string(),
+  width: z.number(),
+  height: z.number(),
+  label: z.string().optional(),
+  span: z.union([z.literal(2), z.literal(3), z.literal(4), z.literal(6)]).optional(),
+})
+
 export const automationSchema = z.object({
   id: z.string(),
   slug: z.string(),
@@ -64,14 +74,11 @@ export const automationSchema = z.object({
   icon: z.string(),
   videoUrl: z.string().optional(),
   techStack: z.array(z.string()).optional(),
-  screenshots: z.array(z.object({
-    src: z.string(),
+  screenshots: z.array(screenshotSchema).optional(),
+  screenshotSections: z.array(z.object({
     title: z.string(),
-    description: z.string(),
-    width: z.number(),
-    height: z.number(),
-    label: z.string().optional(),
-    span: z.union([z.literal(2), z.literal(3), z.literal(4), z.literal(6)]).optional(),
+    description: z.string().optional(),
+    screenshots: z.array(screenshotSchema),
   })).optional(),
   images: z.object({
     hero: z.string(),

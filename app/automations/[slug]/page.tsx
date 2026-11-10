@@ -57,6 +57,19 @@ export default async function AutomationDetailPage({
     notFound();
   }
 
+  const screenshotSections =
+    automation.screenshotSections ??
+    (automation.screenshots?.length
+      ? [
+          {
+            title: "Dentro del panel",
+            description:
+              "Las herramientas que usa el equipo día a día, conectadas al agente.",
+            screenshots: automation.screenshots,
+          },
+        ]
+      : []);
+
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Inicio", url: "/" },
     { name: "Automatizaciones", url: "/automations" },
@@ -251,8 +264,8 @@ export default async function AutomationDetailPage({
           </div>
         </section>
 
-        {automation.screenshots && automation.screenshots.length > 0 && (
-          <AutomationScreenshots screenshots={automation.screenshots} />
+        {screenshotSections.length > 0 && (
+          <AutomationScreenshots sections={screenshotSections} />
         )}
 
         {/* CTA Footer */}

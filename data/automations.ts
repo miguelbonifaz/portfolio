@@ -24,6 +24,27 @@ const automationsData: Automation[] = [
     icon: 'scissors',
     videoUrl: '/assets/videos/bonifaz-peluqueros-agent.mp4',
     techStack: ['Laravel', 'Laravel AI SDK', 'OpenAI', 'WhatsApp Cloud API', 'Horizon', 'Reverb', 'Vue 3'],
+    screenshotSections: [
+      {
+        title: 'Panel administrativo',
+        description: 'Lo que usa el equipo de la peluquería día a día.',
+        screenshots: [
+        { src: '/assets/images/automations/bonifaz-peluqueros/chat.webp', label: 'Chat', title: 'Bandeja de chats', description: 'Conversaciones del agente en tiempo real, con opción de pausar el bot por cliente.', width: 1920, height: 1200, span: 3 },
+        { src: '/assets/images/automations/bonifaz-peluqueros/calendar.webp', label: 'Agenda', title: 'Agenda diaria', description: 'Citas de cada profesional en el día, actualizadas en tiempo real.', width: 1920, height: 1200, span: 3 },
+        ],
+      },
+      {
+        title: 'Reserva web',
+        description: 'El flujo que sigue el cliente para reservar desde la web, en cinco pasos.',
+        screenshots: [
+        { src: '/assets/images/automations/bonifaz-peluqueros/reserva-1-servicio.webp', label: 'Servicio', title: 'Servicio y profesional', description: 'El cliente elige el servicio y con quién atenderse.', width: 1920, height: 1200, span: 2 },
+        { src: '/assets/images/automations/bonifaz-peluqueros/reserva-2-hora.webp', label: 'Hora', title: 'Fecha y hora', description: 'Calendario con los horarios disponibles de cada profesional.', width: 1920, height: 1200, span: 2 },
+        { src: '/assets/images/automations/bonifaz-peluqueros/reserva-3-detalles.webp', label: 'Detalles', title: 'Resumen de la cita', description: 'Servicio, fecha, hora y profesional antes de continuar.', width: 1920, height: 1200, span: 2 },
+        { src: '/assets/images/automations/bonifaz-peluqueros/reserva-4-formulario.webp', label: 'Formulario', title: 'Datos del cliente', description: 'Nombre, teléfono y una nota opcional.', width: 1920, height: 1200, span: 3 },
+        { src: '/assets/images/automations/bonifaz-peluqueros/reserva-5-finalizacion.webp', label: 'Finalización', title: 'Reserva confirmada', description: 'La cita queda registrada y el cliente recibe la confirmación por WhatsApp.', width: 1920, height: 1200, span: 3 },
+        ],
+      },
+    ],
     images: {
       hero: '/assets/images/projects/bonifaz-peluqueros/bonifaz-peluqueros-hero.png',
       gallery: []
