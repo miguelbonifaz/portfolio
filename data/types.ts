@@ -57,7 +57,8 @@ export interface AutomationScreenshot {
   description: string
   width: number
   height: number
-  span?: 1 | 2 | 3
+  span?: 2 | 3 | 4 | 6
+  label?: string
 }
 
 export interface Automation {

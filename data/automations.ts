@@ -55,10 +55,11 @@ const automationsData: Automation[] = [
     icon: 'cake',
     videoUrl: '/assets/videos/dulce-sabor-agent.mp4',
     screenshots: [
-      { src: '/assets/images/automations/dulce-sabor/chat.webp', title: 'Bandeja de chats', description: 'Conversaciones en tiempo real, con el asistente activable por cliente.', width: 1920, height: 1200, span: 3 },
-      { src: '/assets/images/automations/dulce-sabor/board.webp', title: 'Tablero de cotizaciones', description: 'Detalle de cada pedido: sabor, porciones, productos, precio, anticipo y entrega.', width: 1920, height: 1200, span: 3 },
-      { src: '/assets/images/automations/dulce-sabor/products.webp', title: 'Productos', description: 'Catálogo con embeddings para la búsqueda semántica del agente.', width: 1920, height: 1200, span: 2 },
-      { src: '/assets/images/automations/dulce-sabor/whatsapp-catalog.webp', title: 'Catálogo de WhatsApp', description: 'Los productos se sincronizan con el catálogo de WhatsApp Business.', width: 1080, height: 2400, span: 1 },
+      { src: '/assets/images/automations/dulce-sabor/chat.webp', label: 'Chat', title: 'Bandeja de chats', description: 'Conversaciones en tiempo real, con el asistente activable por cliente.', width: 1920, height: 1200, span: 6 },
+      { src: '/assets/images/automations/dulce-sabor/board-overview.webp', label: 'Tablero', title: 'Tablero de cotizaciones', description: 'Cada pedido avanza entre Pendiente, En revisión y Confirmada.', width: 1920, height: 1200, span: 3 },
+      { src: '/assets/images/automations/dulce-sabor/board.webp', label: 'Detalle', title: 'Detalle de la cotización', description: 'Sabor, porciones, productos, precio, anticipo y entrega en una sola vista.', width: 1920, height: 1200, span: 3 },
+      { src: '/assets/images/automations/dulce-sabor/products.webp', label: 'Productos', title: 'Productos', description: 'Catálogo con embeddings para la búsqueda semántica del agente.', width: 1920, height: 1200, span: 4 },
+      { src: '/assets/images/automations/dulce-sabor/whatsapp-catalog.webp', label: 'Catálogo', title: 'Catálogo de WhatsApp', description: 'Los productos se sincronizan con el catálogo de WhatsApp Business.', width: 1080, height: 2400, span: 2 },
     ],
     techStack: ['Laravel', 'Laravel AI SDK', 'OpenAI', 'WhatsApp Cloud API', 'Reverb', 'React + Inertia', 'SerpAPI'],
     images: {
