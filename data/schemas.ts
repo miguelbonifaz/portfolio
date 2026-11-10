@@ -70,7 +70,8 @@ export const automationSchema = z.object({
     description: z.string(),
     width: z.number(),
     height: z.number(),
-    span: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
+    label: z.string().optional(),
+    span: z.union([z.literal(2), z.literal(3), z.literal(4), z.literal(6)]).optional(),
   })).optional(),
   images: z.object({
     hero: z.string(),
